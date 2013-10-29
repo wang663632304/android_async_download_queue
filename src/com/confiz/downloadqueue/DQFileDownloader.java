@@ -216,7 +216,8 @@ public class DQFileDownloader extends Thread {
 				if (fileForRename != null && fileForRename.exists()) {
 					boolean success = fileForRename.renameTo(new File(downloadingFileDirectory, downloadingFileNameOrignalName));
 					if (success) {
-						Log.i(TAG, "File suessfull renamed to " + downloadingFileNameOrignalName);
+						Log.i(TAG, "File successfully renamed to " + downloadingFileNameOrignalName);
+                        Log.i(TAG, "Path of file is" + fileForRename.getAbsolutePath());
 					}
 				}
 				this.queueListener.onComplete(request.getKey());

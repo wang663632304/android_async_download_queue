@@ -355,8 +355,19 @@ public class DQRequest extends com.antlersoft.android.dbimpl.ImplementationBase 
 		this.title = title;
 	}
 
-
-	public DQRequest(String key, int type, String title, boolean canEncrypt, String fileName, String filePath,
+    /**
+     *
+     * @param key Unique Value which will identify our download, DQResponseListener will be using this key to update
+     *            us on progress of download task
+     * @param type type of download JPEG, PNG, RAR etc
+     * @param title title of download that will be displayed in progress bar
+     * @param canEncrypt Do you want to encrypt data so saved file can't be directly accessed via SD card
+     * @param fileName file name to be saved
+     * @param filePath path of file to be saved
+     * @param fileFolderPath folder in which file will be saved
+     * @param fileUrl online URL of file
+     */
+	public                                                                                                                           DQRequest(String key, int type, String title, boolean canEncrypt, String fileName, String filePath,
 	        String fileFolderPath, String fileUrl) {
 
 		super();

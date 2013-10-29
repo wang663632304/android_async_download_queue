@@ -182,7 +182,8 @@ public class DQAsyncFileDownloader extends AsyncTask<Void, Integer, Boolean> {
 					final boolean success = fileForRename.renameTo(new File(this.downloadingFileDirectory,
 					        this.downloadingFileNameOrignalName));
 					if (success) {
-						Log.i(this.TAG, "File suessfull renamed to " + this.downloadingFileNameOrignalName);
+						Log.i(this.TAG, "File successfully renamed to " + this.downloadingFileNameOrignalName);
+                        Log.i(this.TAG, "File path is " + fileForRename.getAbsolutePath());
 					}
 				}
 				this.queueListener.onComplete(key);
@@ -209,7 +210,8 @@ public class DQAsyncFileDownloader extends AsyncTask<Void, Integer, Boolean> {
 					boolean success = fileForRename.renameTo(new File(downloadingFileDirectory,
 					        downloadingFileNameOrignalName));
 					if (success) {
-						Log.i(TAG, "File suessfull renamed to " + downloadingFileNameOrignalName);
+						Log.i(TAG, "File successfully renamed to " + downloadingFileNameOrignalName);
+                        Log.i(this.TAG, "Path of file is " + fileForRename.getAbsolutePath());
 					}
 				}
 				this.queueListener.onComplete(request.getKey());
