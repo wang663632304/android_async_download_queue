@@ -6,7 +6,7 @@
 
 package com.confiz.downloadqueue.utils;
 
-import com.example.downloadqueue.R;
+import com.confiz.downloadqueue.R;
 
 public enum DQErrors {
 

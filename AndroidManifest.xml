@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.downloadqueue"
+    package="com.confiz.downloadqueue"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -24,7 +24,7 @@
         </activity>
 
         <receiver
-            android:name=".DQNetworkManger"
+            android:name="com.confiz.downloadqueue.DQNetworkManger"
             android:label="NetworkConnection" >
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -32,7 +32,7 @@
         </receiver>
 
         <service
-            android:name=".DQService"
+            android:name="com.confiz.downloadqueue.DQService"
             android:enabled="true" />
     </application>
 
