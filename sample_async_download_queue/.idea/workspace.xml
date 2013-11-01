@@ -28,12 +28,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f37c56c-80a9-4dd3-9867-b69cdf181208" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="E:\Android Project\Async Download manager\android_async_download_queue\Async Download manager\android_async_download_queue\src\com\confiz\downloadqueue\DQFileDownloader.java" afterPath="E:\Android Project\Async Download manager\android_async_download_queue\Async Download manager\android_async_download_queue\src\com\confiz\downloadqueue\DQFileDownloader.java" />
-      <change type="MODIFICATION" beforePath="E:\Android Project\Async Download manager\android_async_download_queue\Async Download manager\android_async_download_queue\src\com\confiz\downloadqueue\model\DQRequest.java" afterPath="E:\Android Project\Async Download manager\android_async_download_queue\Async Download manager\android_async_download_queue\src\com\confiz\downloadqueue\model\DQRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383288645914" ignored="false" />
+    <file path="/Dummy.txt" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383288993187" ignored="false" />
     <file path="/fragment.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383288686584" ignored="false" />
     <file path="/MyActivity.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383138141910" ignored="false" />
     <file path="/main.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383218919316" ignored="false" />
@@ -162,7 +163,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../android_async_download_queue/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="27" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.8787879">
+            <state line="45" column="27" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.8766626">
               <folding />
             </state>
           </provider>
@@ -176,7 +177,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Async Download manager/android_async_download_queue" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitLogSettings">
     <option name="myDateState">
@@ -211,7 +212,7 @@
     <option name="width" value="1296" />
     <option name="height" value="1010" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -237,25 +238,27 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="Sample" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../android_async_download_queue/libs/com.antlersoft.android.db_0.1.6.jar!/" />
@@ -266,9 +269,11 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -312,6 +317,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -338,19 +356,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -432,6 +437,23 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1f37c56c-80a9-4dd3-9867-b69cdf181208" name="Default" comment="" />
@@ -462,7 +484,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.77438307" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.77438307" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22561692" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.77438307" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -579,9 +601,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/confiz/adapters/DownloadListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="23" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="54" column="23" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/downloading_list_item.xml">
@@ -594,9 +614,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="27" selection-start="233" selection-end="233" vertical-scroll-proportion="0.11663808">
-          <folding />
-        </state>
+        <state line="4" column="27" selection-start="233" selection-end="233" vertical-scroll-proportion="0.11663808" />
       </provider>
       <provider editor-type-id="android-designer">
         <state />
@@ -604,9 +622,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/confiz/Utils/DownloadUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="22" selection-start="405" selection-end="405" vertical-scroll-proportion="0.033175357">
-          <folding />
-        </state>
+        <state line="20" column="22" selection-start="405" selection-end="405" vertical-scroll-proportion="0.033175357" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../android_async_download_queue/res/values/strings.xml">
@@ -635,7 +651,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../android_async_download_queue/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="27" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.8787879">
+        <state line="45" column="27" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.8766626">
           <folding />
         </state>
       </provider>
@@ -693,7 +709,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>downloadmanagerexample</last-edited>
+          <last-edited>android_async_download_queue</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
