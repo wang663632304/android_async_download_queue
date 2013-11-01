@@ -28,8 +28,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f37c56c-80a9-4dd3-9867-b69cdf181208" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/confiz/listeners/DownloadProgressListener.java" afterPath="$PROJECT_DIR$/src/com/confiz/listeners/DownloadProgressListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/confiz/activities/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/confiz/activities/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/confiz/model/ViewHolder.java" afterPath="$PROJECT_DIR$/src/com/confiz/model/ViewHolder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../android_async_download_queue/res/values/colors.xml" afterPath="$PROJECT_DIR$/../android_async_download_queue/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/downloading_list_item.xml" afterPath="$PROJECT_DIR$/res/layout/downloading_list_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test.iws" />
@@ -51,19 +54,19 @@
     <file path="/a.dummy" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383131681392" ignored="false" />
     <file path="/DQAsyncFileDownloader.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383050631982" ignored="false" />
     <file path="/DQFileDownloader.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383051085492" ignored="false" />
-    <file path="/ViewHolder.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383226066778" ignored="false" />
+    <file path="/ViewHolder.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383308557942" ignored="false" />
     <file path="/DownloadListAdapter.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383226875860" ignored="false" />
     <file path="/DQRequest.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383053820080" ignored="false" />
     <file path="/LocalDownloadManager.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383056683756" ignored="false" />
-    <file path="/DownloadProgressListener.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383226889205" ignored="false" />
+    <file path="/DownloadProgressListener.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383305771004" ignored="false" />
     <file path="/DownloadUtils.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383136256714" ignored="false" />
     <file path="E:/MusicPlayer/gen/com/andrew/apollo/IApolloService.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383216568085" ignored="false" />
     <file path="/DownloadFileObj.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383217341552" ignored="false" />
     <file path="E:/X_Submanages/sub_manage_svn/projects/TempaBayTimes/submanage/trunk/java/com/skylist/stormpost/submanage/action/RegistrationAction.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383217042526" ignored="false" />
     <file path="/DownloadedFilesAdapter.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383218032922" ignored="false" />
     <file path="/downloaded_list_item.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383219948826" ignored="false" />
-    <file path="/MainActivity.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383225682940" ignored="false" />
-    <file path="/downloading_list_item.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383226599822" ignored="false" />
+    <file path="/MainActivity.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383308108353" ignored="false" />
+    <file path="/downloading_list_item.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383308527482" ignored="false" />
     <file path="$PROJECT_DIR$/../../../test/gen/com/example/test/Manifest.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383286155912" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +84,7 @@
   <component name="DebuggerManager">
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/confiz/model/ViewHolder.java" line="121" class="com.confiz.model.ViewHolder" package="com.confiz.model">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/confiz/activities/MainActivity.java" line="93" class="com.confiz.activities.MainActivity$2" package="com.confiz.activities">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -145,25 +148,39 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/confiz/activities/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="0" selection-start="3986" selection-end="3986" vertical-scroll-proportion="0.0">
+            <state line="77" column="33" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#2995#4235#0" expanded="true" />
+                <element signature="e#4224#4225#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewHolder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/confiz/model/ViewHolder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="34" selection-start="2147" selection-end="2147" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#2095#2112#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="colors.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../android_async_download_queue/res/values/colors.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="47" selection-start="938" selection-end="938" vertical-scroll-proportion="-14.96">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <file leaf-file-name="DownloadListAdapter.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/confiz/adapters/DownloadListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="76" selection-start="416" selection-end="438" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../android_async_download_queue/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="27" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.8766626">
+            <state line="42" column="16" selection-start="954" selection-end="954" vertical-scroll-proportion="0.39515153">
               <folding />
             </state>
           </provider>
@@ -187,7 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../Async Download manager/android_async_download_queue/src/com/confiz/downloadqueue/DQFileDownloader.java" />
         <option value="$PROJECT_DIR$/src/com/confiz/listeners/DQResponseListenenerImpl.java" />
         <option value="$PROJECT_DIR$/src/com/confiz/listeners/DQResponseListenerImpl.java" />
         <option value="$PROJECT_DIR$/src/com/confiz/activities/MyActivity.java" />
@@ -195,14 +211,15 @@
         <option value="$PROJECT_DIR$/src/com/confiz/Utils/MyIntents.java" />
         <option value="$PROJECT_DIR$/src/com/confiz/adapters/DownloadedFilesAdapter.java" />
         <option value="$PROJECT_DIR$/res/layout/downloaded_list_item.xml" />
-        <option value="$PROJECT_DIR$/res/layout/downloading_list_item.xml" />
         <option value="$PROJECT_DIR$/src/com/confiz/adapters/DownloadListAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/confiz/listeners/DownloadProgressListener.java" />
         <option value="$PROJECT_DIR$/src/com/confiz/Utils/DownloadUtils.java" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
-        <option value="$PROJECT_DIR$/src/com/confiz/model/ViewHolder.java" />
-        <option value="$PROJECT_DIR$/src/com/confiz/activities/MainActivity.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/confiz/listeners/DownloadProgressListener.java" />
+        <option value="$PROJECT_DIR$/res/layout/downloading_list_item.xml" />
+        <option value="$PROJECT_DIR$/../android_async_download_queue/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/src/com/confiz/activities/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/confiz/model/ViewHolder.java" />
       </list>
     </option>
   </component>
@@ -246,6 +263,126 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Sample" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_async_download_queue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_async_download_queue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="confiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_async_download_queue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="confiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_async_download_queue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="confiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listeners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_async_download_queue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="confiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adapters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_async_download_queue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="confiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -464,11 +601,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1010" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6709753" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278496" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39952996" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -477,6 +616,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6709753" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278496" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32549942" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -484,16 +624,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.77438307" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.67215043" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22561692" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.77438307" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.77438307" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6709753" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39952996" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -562,11 +699,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/android-sdks/sources/android-14/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="290" column="13" selection-start="10245" selection-end="10245" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/android-sdks/sources/android-14/android/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12169" column="22" selection-start="456744" selection-end="456744" vertical-scroll-proportion="0.33333334" />
@@ -582,34 +714,9 @@
         <state line="5" column="19" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/confiz/listeners/DownloadProgressListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="1" selection-start="2401" selection-end="2401" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="27" selection-start="646" selection-end="646" vertical-scroll-proportion="0.41666666" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/confiz/model/ViewHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="53" selection-start="2726" selection-end="2726" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/confiz/adapters/DownloadListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="23" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/downloading_list_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0" />
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
@@ -618,11 +725,6 @@
       </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/confiz/Utils/DownloadUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="22" selection-start="405" selection-end="405" vertical-scroll-proportion="0.033175357" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../android_async_download_queue/res/values/strings.xml">
@@ -635,6 +737,13 @@
         <state line="2" column="41" selection-start="92" selection-end="92" vertical-scroll-proportion="0.05592105" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="32" selection-start="253" selection-end="254" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="76" selection-start="416" selection-end="438" vertical-scroll-proportion="0.0">
@@ -642,16 +751,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/confiz/activities/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/confiz/Utils/DownloadUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="0" selection-start="3986" selection-end="3986" vertical-scroll-proportion="0.0">
+        <state line="20" column="22" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="27" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.8766626">
+        <state line="23" column="47" selection-start="938" selection-end="938" vertical-scroll-proportion="-14.96">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/downloading_list_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="44" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.41103202">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/confiz/listeners/DownloadProgressListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="36" selection-start="2048" selection-end="2056" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/confiz/model/ViewHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="34" selection-start="2147" selection-end="2147" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2095#2112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/confiz/activities/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="33" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2995#4235#0" expanded="true" />
+            <element signature="e#4224#4225#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/confiz/adapters/DownloadListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="16" selection-start="954" selection-end="954" vertical-scroll-proportion="0.39515153">
           <folding />
         </state>
       </provider>

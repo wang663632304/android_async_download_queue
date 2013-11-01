@@ -20,72 +20,38 @@ public class ViewHolder {
     public static final int KEY_PROGRESS = 2;
     public static final int KEY_IS_PAUSED = 3;
     public static final int KEY_TITLE = 4;
+    public static final int ESTIMATED_TIME = 5;
     public static final int KEY = 5;
 
     public TextView titleText;
+    public TextView estimatedTime;
     public ProgressBar progressBar;
     public TextView speedText;
     public Button deleteButton;
-
-    private long startTime;
-    private long totalSize;
-    private long startPercentage;
-
-
     private boolean hasInitiated = false;
-
-    public ViewHolder(View parentView, long totalSize) {
-        if (parentView != null) {
-            titleText = (TextView) parentView.findViewById(R.id.title);
-            speedText = (TextView) parentView.findViewById(R.id.speed);
-            progressBar = (ProgressBar) parentView
-                    .findViewById(R.id.progress_bar);
-            deleteButton = (Button) parentView.findViewById(R.id.btn_delete);
-            hasInitiated = true;
-            startTime = System.currentTimeMillis();
-            this.totalSize = totalSize;
-        }
-    }
 
     public ViewHolder(View parentView) {
         if (parentView != null) {
             titleText = (TextView) parentView.findViewById(R.id.title);
             speedText = (TextView) parentView.findViewById(R.id.speed);
+            estimatedTime = (TextView) parentView.findViewById(R.id.estimated_time);
             progressBar = (ProgressBar) parentView
                     .findViewById(R.id.progress_bar);
             deleteButton = (Button) parentView.findViewById(R.id.btn_delete);
             hasInitiated = true;
-            startTime = System.currentTimeMillis();
         }
     }
 
-    public HashMap<Integer, String> getItemDataMap(String title, String progress, String isPaused, String key) {
-        HashMap<Integer, String> item = new HashMap<Integer, String>();
-        item.put(KEY_TITLE, title);
-        item.put(KEY_SPEED, calculateSpeed(Integer.parseInt(progress)));
-        item.put(KEY_PROGRESS, progress);
-        item.put(KEY_IS_PAUSED, isPaused);
-        item.put(KEY, key);
-        return item;
-    }
-
-    public void setData(String title, String key, String progress) {
-        setData(title, key, progress, false);
-    }
-
-    public void setData(String title, String key, String progress,
-                        Boolean isPaused) {
+    public void setData(String title, String progress, String speed, String estimatedTime) {
         if (hasInitiated) {
-            HashMap<Integer, String> item = getItemDataMap(title,
-                    progress, isPaused.toString(),key);
 
             titleText.setText(title);
-            speedText.setText(calculateSpeed(Integer.parseInt(progress)));
+            speedText.setText(speed);
+            this.estimatedTime.setText(estimatedTime);
             if (TextUtils.isEmpty(progress)) {
                 progressBar.setProgress(0);
             } else {
-                progressBar
-                        .setProgress(Integer.parseInt(item.get(KEY_PROGRESS)));
+                progressBar.setProgress(Integer.parseInt(progress));
             }
 
         }
@@ -118,18 +84,6 @@ public class ViewHolder {
         }
     }
 
-    private String calculateSpeed(int progress) {
-        double duration = System.currentTimeMillis() - startTime;
-        this.startTime = System.currentTimeMillis();
-        duration /= 1000;
-        double durationData = (progress - startPercentage) * totalSize;
-        durationData /= 1024;
-        durationData /= 1024;
-        this.startPercentage = progress;
-        Double speed = durationData / duration;
-        return speed.intValue() + "";
-
-    }
 
     private void onPause() {
 

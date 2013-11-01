@@ -24,7 +24,6 @@ public class MainActivity extends Activity {
     private static final String DOWNLOAD_MANAGER = "download_manager";
     private BroadcastReceiver broadcastReceiver;
     private Context context;
-    private long totalSize;
     private ListView downloadList;
     private TextView queueText;
 
@@ -55,8 +54,6 @@ public class MainActivity extends Activity {
             }
         });
         downloadListAdapter.notifyDataSetChanged(); //for first call to datasetobserver
-
-
 
 
     }
@@ -90,30 +87,30 @@ public class MainActivity extends Activity {
             public void onReceive(Context context, Intent intent) {
                 String event = intent.getStringExtra("event");
                 Log.i(this.getClass().getSimpleName(), "event received: " + event);
-                if (event.equals("onDownloadStart")) {
-                    totalSize = intent.getIntExtra("totalSize", 0);
-
-                } else if (event.equals("onComplete")) {
+                if (event.equals("onComplete")) {
                     String key = intent.getStringExtra("key");
                     downloadListAdapter.removeItem(key);
-                } else {
+                } else if (event.equals("updateDownloadingEstimates")) {
                     String key = intent.getStringExtra("key");
+                    String speed = intent.getStringExtra("speed");
+                    String estimatedTime = intent.getStringExtra("estimatedTime");
+                    String progress = intent.getStringExtra("progress");
+
+                    Double progressDoubleValue = Double.parseDouble(progress);
+                    Integer progressIntValue = progressDoubleValue.intValue();
+
                     View taskListItem = downloadList.findViewWithTag(key);
-                    ViewHolder viewHolder = new ViewHolder(taskListItem,totalSize);
-
-                    int progress = intent.getIntExtra("progress", 0);
-
-                    viewHolder.setData(key, key, Integer.toString(progress));
-
+                    ViewHolder viewHolder = new ViewHolder(taskListItem);
+                    viewHolder.setData(key, progressIntValue.toString(), speed, estimatedTime);
 
                 }
+
             }
         };
         IntentFilter intentToReceiveFilter = new IntentFilter();
         intentToReceiveFilter.addAction(DOWNLOAD_MANAGER);
         registerReceiver(broadcastReceiver, intentToReceiveFilter);
     }
-
 
 
     @Override

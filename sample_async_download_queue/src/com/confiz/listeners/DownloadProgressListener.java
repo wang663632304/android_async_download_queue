@@ -22,27 +22,15 @@ public class DownloadProgressListener implements DQResponseListener {
 
     @Override
     public void onDownloadStart(String key) {
-        Log.i(this.getClass().getSimpleName(), "download started" + key);
     }
 
     @Override
     public void onDownloadStart(String key, int totalSize) {
         Log.i(this.getClass().getSimpleName(), "download started" + key + " size:" + totalSize);
-
-        Intent broadCast = new Intent(DOWNLOAD_MANAGER);
-        broadCast.putExtra("event", "onDownloadStart");
-        broadCast.putExtra("key", key);
-        broadCast.putExtra("totalSize", totalSize);
-        context.sendBroadcast(broadCast);
     }
 
     @Override
     public void updateProgress(String key, int progress) {
-        Intent broadCast = new Intent(DOWNLOAD_MANAGER);
-        broadCast.putExtra("event", "updateProgress");
-        broadCast.putExtra("key", key);
-        broadCast.putExtra("progress", progress);
-        context.sendBroadcast(broadCast);
     }
 
     @Override
@@ -60,8 +48,23 @@ public class DownloadProgressListener implements DQResponseListener {
         context.sendBroadcast(broadCast);
     }
 
+    /**
+     * details[0]="current downloaded data"
+     * details[1]="total size"
+     * details[2]="download speed"
+     * download[3] ="estimated time"
+     * download[4]= "percentage"
+     * @param key identifier for a download
+     */
     @Override
     public void updateDownloadingEstimates(String key, String[] details) {
+        Intent broadCast = new Intent(DOWNLOAD_MANAGER);
+        broadCast.putExtra("event", "updateDownloadingEstimates");
+        broadCast.putExtra("key", key);
+        broadCast.putExtra("speed", details[2]);
+        broadCast.putExtra("estimatedTime", details[3]);
+        broadCast.putExtra("progress", details[4]);
+        context.sendBroadcast(broadCast);
     }
 
     @Override
