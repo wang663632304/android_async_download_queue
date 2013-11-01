@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../android_async_download_queue/android_async_download_queue.iml" filepath="$PROJECT_DIR$/../android_async_download_queue/android_async_download_queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Async Download manager/android_async_download_queue/android_async_download_queue.iml" filepath="$PROJECT_DIR$/../Async Download manager/android_async_download_queue/android_async_download_queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/downloadmanagerexample.iml" filepath="$PROJECT_DIR$/downloadmanagerexample.iml" />
+    </modules>
+  </component>
+</project>
+

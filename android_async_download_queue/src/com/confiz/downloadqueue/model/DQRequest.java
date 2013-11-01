@@ -365,7 +365,7 @@ public class DQRequest extends com.antlersoft.android.dbimpl.ImplementationBase 
      * @param fileName file name to be saved
      * @param filePath path of file to be saved
      * @param fileFolderPath folder in which file will be saved
-     * @param fileUrl online URL of file
+     * @param fileUrl online
      */
 	public                                                                                                                           DQRequest(String key, int type, String title, boolean canEncrypt, String fileName, String filePath,
 	        String fileFolderPath, String fileUrl) {

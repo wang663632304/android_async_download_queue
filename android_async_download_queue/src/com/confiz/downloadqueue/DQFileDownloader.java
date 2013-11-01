@@ -370,7 +370,7 @@ public class DQFileDownloader extends Thread {
 
 
 	/**
-	 * @param b
+	 * @param shouldKill
 	 */
 	public void cancel(boolean shouldKill) {
 

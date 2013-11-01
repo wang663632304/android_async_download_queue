@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DownloadQueue</string>
+    <string name="progress">progress</string>
+    <string name="no_files_in_queue">No files in queue</string>
+    <string name="delete">Delete</string>
+    <string name="pause">Pause</string>
+    <string name="start_download">start download</string>
+</resources>
