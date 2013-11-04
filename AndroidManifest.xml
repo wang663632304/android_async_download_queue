@@ -34,6 +34,19 @@
         <service
             android:name=".DQService"
             android:enabled="true" />
+        
+        
+        <receiver
+            android:name=".UQNetworkManger"
+            android:label="NetworkConnection" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".UQService"
+            android:enabled="true" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
