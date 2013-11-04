@@ -10,6 +10,7 @@ import com.example.test.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Author: raheel.arif@confiz.com
@@ -17,11 +18,11 @@ import java.util.HashMap;
  */
 public class DownloadListAdapter extends BaseAdapter {
 
-    private final Context mContext;
-    private ArrayList<HashMap<Integer, String>> dataList;
+    private final Context context;
+    private List<HashMap<Integer, String>> dataList;
 
     public DownloadListAdapter(Context context) {
-        mContext = context;
+        this.context = context;
         dataList = new ArrayList<HashMap<Integer, String>>();
     }
 
@@ -61,7 +62,7 @@ public class DownloadListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(
+            convertView = LayoutInflater.from(context).inflate(
                     R.layout.downloading_list_item, null);
         }
 
@@ -69,7 +70,7 @@ public class DownloadListAdapter extends BaseAdapter {
         String key = itemData.get(ViewHolder.KEY);
         convertView.setTag(key);
 
-        ViewHolder viewHolder = new ViewHolder(convertView, mContext, key,this);
+        ViewHolder viewHolder = new ViewHolder(convertView, context, key,this);
 
         viewHolder.setData(itemData);
 

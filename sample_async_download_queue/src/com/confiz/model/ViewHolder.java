@@ -7,12 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 import com.confiz.adapters.DownloadListAdapter;
 import com.confiz.downloadqueue.DQManager;
 import com.example.test.R;
 
-import javax.xml.datatype.Duration;
 import java.util.HashMap;
 
 /**
@@ -21,11 +19,11 @@ import java.util.HashMap;
  */
 public class ViewHolder implements View.OnClickListener {
 
-    public static final int KEY_URL = 0;
-    public static final int KEY_SPEED = 1;
-    public static final int KEY_PROGRESS = 2;
-    public static final int KEY_IS_PAUSED = 3;
-    public static final int KEY_TITLE = 4;
+    public static final int URL = 0;
+    public static final int SPEED = 1;
+    public static final int PROGRESS = 2;
+    public static final int IS_PAUSED = 3;
+    public static final int TITLE = 4;
     public static final int ESTIMATED_TIME = 5;
     public static final int KEY = 5;
 
@@ -74,25 +72,25 @@ public class ViewHolder implements View.OnClickListener {
     public static HashMap<Integer, String> getItemDataMap(String url, String title,
                                                           String speed, String progress, String isPaused, String key) {
         HashMap<Integer, String> item = new HashMap<Integer, String>();
-        item.put(KEY_URL, url);
-        item.put(KEY_TITLE, title);
-        item.put(KEY_SPEED, speed);
-        item.put(KEY_PROGRESS, progress);
-        item.put(KEY_IS_PAUSED, isPaused);
+        item.put(URL, url);
+        item.put(TITLE, title);
+        item.put(SPEED, speed);
+        item.put(PROGRESS, progress);
+        item.put(IS_PAUSED, isPaused);
         item.put(KEY, key);
         return item;
     }
 
     public void setData(HashMap<Integer, String> item) {
         if (hasInitiated) {
-            speedText.setText(item.get(KEY_SPEED));
-            String progress = item.get(KEY_PROGRESS);
+            speedText.setText(item.get(SPEED));
+            String progress = item.get(PROGRESS);
             if (TextUtils.isEmpty(progress)) {
                 progressBar.setProgress(0);
             } else {
                 progressBar.setProgress(Integer.parseInt(progress));
             }
-            if (Boolean.parseBoolean(item.get(KEY_IS_PAUSED))) {
+            if (Boolean.parseBoolean(item.get(IS_PAUSED))) {
                 onPause();
             }
         }

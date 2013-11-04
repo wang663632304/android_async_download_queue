@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
             @Override
             public void onChanged() {
                 super.onChanged();
-                if (downloadListAdapter.getCount() < 1) {
+                if (downloadListAdapter.getCount() == 0) {
                     queueText.setVisibility(View.VISIBLE);
                 } else {
                     queueText.setVisibility(View.GONE);
