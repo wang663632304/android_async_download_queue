@@ -1,19 +1,25 @@
 package com.confiz.model;
 
+import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+import com.confiz.adapters.DownloadListAdapter;
+import com.confiz.downloadqueue.DQManager;
 import com.example.test.R;
 
+import javax.xml.datatype.Duration;
 import java.util.HashMap;
 
 /**
  * Author: raheel.arif@confiz.com
  * Date: 10/31/13
  */
-public class ViewHolder {
+public class ViewHolder implements View.OnClickListener {
 
     public static final int KEY_URL = 0;
     public static final int KEY_SPEED = 1;
@@ -23,14 +29,17 @@ public class ViewHolder {
     public static final int ESTIMATED_TIME = 5;
     public static final int KEY = 5;
 
-    public TextView titleText;
-    public TextView estimatedTime;
-    public ProgressBar progressBar;
-    public TextView speedText;
-    public Button deleteButton;
+    private TextView titleText;
+    private TextView estimatedTime;
+    private ProgressBar progressBar;
+    private TextView speedText;
+    private Button deleteButton;
+    private Context context;
+    private String key;
     private boolean hasInitiated = false;
+    private DownloadListAdapter downloadListAdapter;
 
-    public ViewHolder(View parentView) {
+    public ViewHolder(View parentView, Context context, String key, DownloadListAdapter downloadListAdapter) {
         if (parentView != null) {
             titleText = (TextView) parentView.findViewById(R.id.title);
             speedText = (TextView) parentView.findViewById(R.id.speed);
@@ -38,7 +47,12 @@ public class ViewHolder {
             progressBar = (ProgressBar) parentView
                     .findViewById(R.id.progress_bar);
             deleteButton = (Button) parentView.findViewById(R.id.btn_delete);
+            deleteButton.setOnClickListener(this);
+
             hasInitiated = true;
+            this.context = context;
+            this.key = key;
+            this.downloadListAdapter = downloadListAdapter;
         }
     }
 
@@ -86,6 +100,18 @@ public class ViewHolder {
 
 
     private void onPause() {
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        DQManager dqManager = DQManager.getInstance(context);
+
+        dqManager.stopDownloading(context, key, true);
+        downloadListAdapter.removeItem(key);
+        Log.v(this.getClass().getSimpleName(), "Deleted download: " + key);
+
 
     }
 }

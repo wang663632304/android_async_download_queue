@@ -60,7 +60,6 @@ public class MainActivity extends Activity {
 
     public void startDownload(View view) {
 
-
         String url = "http://songs.pakheaven.com/paki2k/Vital%20Signs%20-%20Aitebar%20(Vol%20III)%20(1993)/12%20Dil%20Dil%20Pakistan.mp3";
         DQManager dqManager = DQManager.getInstance(this.getApplicationContext());
         DownloadUtils.createDirectory(context);
@@ -74,10 +73,7 @@ public class MainActivity extends Activity {
         dqManager.addToQueue(dqRequest, this);
         DownloadProgressListener downloadProgressListener = new DownloadProgressListener(this);
         DQResponseHolder.getInstance().addListener(downloadProgressListener);
-
         downloadListAdapter.addItem(url, fileName, false, fileName);
-
-
     }
 
 
@@ -100,7 +96,7 @@ public class MainActivity extends Activity {
                     Integer progressIntValue = progressDoubleValue.intValue();
 
                     View taskListItem = downloadList.findViewWithTag(key);
-                    ViewHolder viewHolder = new ViewHolder(taskListItem);
+                    ViewHolder viewHolder = new ViewHolder(taskListItem, context, key, downloadListAdapter);
                     viewHolder.setData(key, progressIntValue.toString(), speed, estimatedTime);
 
                 }

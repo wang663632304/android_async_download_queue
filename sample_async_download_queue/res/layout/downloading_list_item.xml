@@ -49,11 +49,7 @@
                 android:layout_height="60dip"
                 android:text="@string/delete"/>
 
-        <Button
-                android:id="@+id/btn_pause"
-                android:layout_width="wrap_content"
-                android:layout_height="60dip"
-                android:text="@string/pause"/>
+
 
     </LinearLayout>
 

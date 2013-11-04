@@ -40,9 +40,9 @@ public class DownloadListAdapter extends BaseAdapter {
         return position;
     }
 
-    public void addItem(String url, String title, boolean isPaused,String key) {
+    public void addItem(String url, String title, boolean isPaused, String key) {
         HashMap<Integer, String> item = ViewHolder.getItemDataMap(url, title, null,
-                null, isPaused + "",key);
+                null, isPaused + "", key);
         dataList.add(item);
         this.notifyDataSetChanged();
     }
@@ -69,34 +69,11 @@ public class DownloadListAdapter extends BaseAdapter {
         String key = itemData.get(ViewHolder.KEY);
         convertView.setTag(key);
 
-        ViewHolder viewHolder = new ViewHolder(convertView);
-        viewHolder.setData(itemData);
+        ViewHolder viewHolder = new ViewHolder(convertView, mContext, key,this);
 
-        viewHolder.deleteButton.setOnClickListener(new DownloadBtnListener(key,
-                viewHolder));
+        viewHolder.setData(itemData);
 
         return convertView;
     }
-
-    private class DownloadBtnListener implements View.OnClickListener {
-        private final String url;
-
-        public DownloadBtnListener(String url, ViewHolder viewHolder) {
-            this.url = url;
-        }
-
-        @Override
-        public void onClick(View v) {
-
-            switch (v.getId()) {
-                case R.id.btn_delete:
-                    //TODO: Delete item for DQ Manager
-
-                    removeItem(url);
-                    break;
-            }
-        }
-    }
-
 
 }
