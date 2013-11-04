@@ -11,7 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.confiz.Utils.DownloadUtils;
+import com.confiz.utils.DownloadUtils;
 import com.confiz.adapters.DownloadListAdapter;
 import com.confiz.downloadqueue.DQManager;
 import com.confiz.downloadqueue.DQResponseHolder;

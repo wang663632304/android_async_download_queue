@@ -1,4 +1,4 @@
-package com.confiz.Utils;
+package com.confiz.utils;
 
 import android.content.Context;
 import android.os.Environment;
