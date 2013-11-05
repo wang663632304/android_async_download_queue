@@ -6,7 +6,7 @@
 
 package com.confiz.uploadqueue.utils;
 
-import com.confiz.uploadqueue.R;
+import com.confiz.downloadqueue.R;
 
 public enum UQErrors {
 

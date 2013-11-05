@@ -52,7 +52,7 @@ public class UQRequest extends com.antlersoft.android.dbimpl.ImplementationBase 
 
 	public static final int GEN_ID_TIMEESTIMATIONS = 9;
 
-	public static final String GEN_FIELD_FILENAME = "FILENAME";
+	public static final String GEN_FIELD_FILENAME = "S3FILENAME";
 
 	public static final int GEN_ID_FILENAME = 10;
 
@@ -76,7 +76,7 @@ public class UQRequest extends com.antlersoft.android.dbimpl.ImplementationBase 
 
 	public static final int GEN_ID_ERROR = 15;
 
-	public static final String GEN_FIELD_DOWNLOADING = "DOWNLOADING";
+	public static final String GEN_FIELD_DOWNLOADING = "UPLOADING";
 
 	public static final int GEN_ID_DOWNLOADING = 16;
 
@@ -101,7 +101,7 @@ public class UQRequest extends com.antlersoft.android.dbimpl.ImplementationBase 
 	public static final int GEN_ID_USERID = 21;
 
 	// SQL Command for creating the table
-	public static String GEN_CREATE = "CREATE TABLE IF NOT EXISTS DQ_REQUEST (" + "ID INTEGER," + "KEY TEXT," + "STATUS INTEGER," + "POSITION INTEGER," + "ERRORDISCRIPTION TEXT," + "TOTALSIZE INTEGER," + "DOWNLOADEDSIZE INTEGER," + "TYPE INTEGER," + "DATAESTIMATIONS TEXT," + "TIMEESTIMATIONS TEXT," + "FILENAME TEXT," + "FILEPATH TEXT," + "S3FOLDER TEXT," + "FILEURL TEXT," + "PROGRESS INTEGER," + "ERROR INTEGER," + "DOWNLOADING INTEGER," + "SAVED INTEGER," + "PARTIALDOWNLOADED INTEGER," + "CANENCRYPT INTEGER," + "TITLE TEXT," + "USERID TEXT" + ")";
+	public static String GEN_CREATE = "CREATE TABLE IF NOT EXISTS DQ_REQUEST (" + "ID INTEGER," + "KEY TEXT," + "STATUS INTEGER," + "POSITION INTEGER," + "ERRORDISCRIPTION TEXT," + "TOTALSIZE INTEGER," + "DOWNLOADEDSIZE INTEGER," + "TYPE INTEGER," + "DATAESTIMATIONS TEXT," + "TIMEESTIMATIONS TEXT," + "S3FILENAME TEXT," + "FILEPATH TEXT," + "S3FOLDER TEXT," + "FILEURL TEXT," + "PROGRESS INTEGER," + "ERROR INTEGER," + "UPLOADING INTEGER," + "SAVED INTEGER," + "PARTIALDOWNLOADED INTEGER," + "CANENCRYPT INTEGER," + "TITLE TEXT," + "USERID TEXT" + ")";
 
 
 	public String Gen_tableName() {
@@ -327,8 +327,8 @@ public class UQRequest extends com.antlersoft.android.dbimpl.ImplementationBase 
 
 
 	public UQRequest(long id, String key, UQUploadingStatus status, int position, String errorDiscription, long totalSize,
-	        long uploadedSize, int type, String dataEstimations, String timeEstimations, String fileName, String filePath,
-	        String fileFolderPath, String fileUrl, int progress, UQErrors currentError, boolean uploading, boolean saved,
+	        long uploadedSize, int type, String dataEstimations, String timeEstimations, String s3FileName, String filePath,
+	        String bucketName, String fileUrl, int progress, UQErrors currentError, boolean uploading, boolean saved,
 	        boolean partialUploaded, boolean canEncrypt, String title) {
 
 		super();
@@ -342,9 +342,9 @@ public class UQRequest extends com.antlersoft.android.dbimpl.ImplementationBase 
 		this.type = type;
 		this.dataEstimations = dataEstimations;
 		this.timeEstimations = timeEstimations;
-		this.s3fileName = fileName;
+		this.s3fileName = s3FileName;
 		this.filePath = filePath;
-		this.bucketName = fileFolderPath;
+		this.bucketName = bucketName;
 		this.fileUrl = fileUrl;
 		this.progress = progress;
 		this.currentError = currentError;
@@ -356,21 +356,19 @@ public class UQRequest extends com.antlersoft.android.dbimpl.ImplementationBase 
 	}
 
 
-	public UQRequest(String key, int type, String title, boolean canEncrypt, String fileName, String filePath,
-	        String fileFolderPath, String fileUrl) {
+	public UQRequest(String key, int type, String title, boolean canEncrypt, String s3FileName, String filePath,
+	        String bucketName) {
 
 		super();
 		this.key = key;
 		this.type = type;
 		this.title = title;
 		this.canEncrypt = canEncrypt;
-		this.s3fileName = fileName;
+		this.s3fileName = s3FileName;
 		this.filePath = filePath;
-		this.bucketName = fileFolderPath;
-		this.fileUrl = fileUrl;
+		this.bucketName = bucketName;
 		status = UQUploadingStatus.WAITING;
 		position = -1;
-
 	}
 
 
@@ -492,15 +490,15 @@ public class UQRequest extends com.antlersoft.android.dbimpl.ImplementationBase 
 	}
 
 
-	public String getFileName() {
+	public String getS3FileName() {
 
 		return this.s3fileName;
 	}
 
 
-	public void setFileName(String fileName) {
+	public void setFileName(String s3FileName) {
 
-		this.s3fileName = fileName;
+		this.s3fileName = s3FileName;
 	}
 
 
@@ -522,9 +520,9 @@ public class UQRequest extends com.antlersoft.android.dbimpl.ImplementationBase 
 	}
 
 
-	public void setBucketName(String fileFolderPath) {
+	public void setBucketName(String bucketName) {
 
-		this.bucketName = fileFolderPath;
+		this.bucketName = bucketName;
 	}
 
 

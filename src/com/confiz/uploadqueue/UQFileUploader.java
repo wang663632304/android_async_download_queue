@@ -94,10 +94,13 @@ public class UQFileUploader extends Thread {
 		request.currentError = UQErrors.NO_ERROR;
 		if(request != null){
 			s3bucketName = request.getS3BucketName();
-			s3FileName = request.getFileName();
+			s3FileName = request.getS3FileName();
 			
 			s3Client = new AmazonS3Client(
-					new BasicAWSCredentials("", ""));
+					new BasicAWSCredentials(UQManager.getInstance(mContext).getS3AccessKey(), UQManager.getInstance(mContext).getS3SecretKey()));
+		}
+		if(mContext != null){
+			prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
 		}
 	}
 
@@ -134,7 +137,7 @@ public class UQFileUploader extends Thread {
 			bytesUploaded = 0;
 
 			// check if we can resume an incomplete upload
-			String uploadId = request.getKey();
+			String uploadId = getCachedUploadId();//request.getKey();
 
 			if (uploadId != null) {
 				// we can resume the upload
@@ -180,14 +183,6 @@ public class UQFileUploader extends Thread {
 						.withUploadId(uploadId).withPartNumber(k)
 						.withFileOffset(filePosition).withFile(file)
 						.withPartSize(thisPartSize);
-				
-				boolean uploadSuccess = false;
-				File file = null;
-				int updateCounter = 0;
-				final long startinTime = System.currentTimeMillis();
-				final int updateAfterThisTimeIteration = 75;
-				long currentUploadBytes = 0;
-				long previouslyUploadedFileSize = 0;
 				
 				com.amazonaws.services.s3.model.ProgressListener s3progressListener = new com.amazonaws.services.s3.model.ProgressListener() {
 					public void progressChanged(ProgressEvent progressEvent) {
@@ -305,6 +300,9 @@ public class UQFileUploader extends Thread {
 		}
 	}
 
+    private String getCachedUploadId() {
+        return prefs.getString(request.getS3FileName() + PREFS_UPLOAD_ID, null);
+}
 
 	public void doWorkForCancel() {
 
@@ -469,10 +467,12 @@ public class UQFileUploader extends Thread {
 
 	private void clearProgressCache() {
 		// clear the cached uploadId and etags
-		Editor edit = prefs.edit();
-		edit.remove(s3FileName + PREFS_UPLOAD_ID);
-		edit.remove(s3FileName + PREFS_ETAGS);
-		SharedPreferencesCompat.apply(edit);
+		if(prefs != null){
+			Editor edit = prefs.edit();
+			edit.remove(s3FileName + PREFS_UPLOAD_ID);
+			edit.remove(s3FileName + PREFS_ETAGS);
+			SharedPreferencesCompat.apply(edit);
+		}
 	}
 
 	public void interrupt() {
@@ -519,3 +519,290 @@ public class UQFileUploader extends Thread {
 	}
 	
 }
+
+//
+/////**
+//// * Initiate a multipart file upload to Amazon S3
+//// * 
+//// * @return the URL of a successfully uploaded file
+//// */
+////public String start() {
+////	final long contentLength = file.length();
+////	long filePosition = 0;
+////	int startPartNumber = 1;
+////	
+////	userInterrupted = false;
+////	userAborted = false;
+////	bytesUploaded = 0;
+////	
+////	TransferManagerConfiguration tmConfig = new TransferManagerConfiguration();
+////	// Sets the minimum part size for upload parts.
+////	tmConfig.setMinimumUploadPartSize(5 * 1024 * 1024);
+////	// Sets the size threshold in bytes for when to use multipart uploads.
+////	tmConfig.setMultipartUploadThreshold(5 * 1024 * 1024);
+////	 
+////
+////    
+////	TransferManager manager = new TransferManager(s3Client);
+////	manager.setConfiguration(tmConfig);
+////	
+////	// Put the image data into S3.
+////	try {
+////	    // Content type is determined by file extension.
+////	    PutObjectRequest por = new PutObjectRequest(
+////	        s3bucketName, "ahmedomer-test/"+file.getName(),
+////	        file);
+////	    // Send the request.
+////	    Upload uploader = manager.upload(por);
+////	    if(uploader != null){
+////
+////	        final AbortMultipartUploadRequest abortRequest = new AbortMultipartUploadRequest(s3bucketName, s3key, file.getName());
+////	        
+////	        ProgressListener s3progressListener = new ProgressListener() {
+////	            public void progressChanged(ProgressEvent progressEvent) {
+////	                
+////	            	// bail out if user cancelled
+////	            	// TODO calling shutdown too brute force?
+////	                if (userInterrupted) {
+////	            		s3Client.shutdown(); 
+////	            		throw new UploadIterruptedException("User interrupted");
+////	            	} else if (userAborted) {
+////	            		// aborted requests cannot be resumed, so clear any cached etags
+////	            		clearProgressCache();
+////	                	s3Client.abortMultipartUpload(abortRequest);
+////	                	s3Client.shutdown();
+////	                }
+////	                
+////	                bytesUploaded += progressEvent.getBytesTransfered();
+////	                
+////	                Log.d(TAG, "bytesUploaded=" + bytesUploaded);
+////	                
+////	                // broadcast progress
+////	                float fpercent = ((bytesUploaded * 100) / contentLength);
+////	                int percent = Math.round(fpercent);
+////	                if (progressListener != null) {
+////	                	progressListener.progressChanged(progressEvent, bytesUploaded, percent);
+////	                }
+////	                
+////	            }
+////	        };
+////	        
+////	    	uploader.addProgressListener(s3progressListener);
+////	    	UploadResult results = uploader.waitForUploadResult();
+////	    	String name = results.getBucketName();
+////	    }
+////	} catch (Exception exception) {
+////	   exception.printStackTrace();
+////	}
+////	
+////    Log.i(TAG, "upload complete for ");
+////    
+////    clearProgressCache();
+////
+////    return "";
+////	
+////}
+//
+///**
+// * Initiate a multipart file upload to Amazon S3
+// * 
+// * @return the URL of a successfully uploaded file
+// */
+//public String start() {
+//	
+//	// initialize
+//	List<PartETag> partETags = new ArrayList<PartETag>();
+//	final long contentLength = file.length();
+//	long filePosition = 0;
+//	int startPartNumber = 1;
+//	
+//	userInterrupted = false;
+//	userAborted = false;
+//	bytesUploaded = 0;
+//	
+//	// check if we can resume an incomplete download
+//	String uploadId = getCachedUploadId();
+//	
+//	if (uploadId != null) {
+//		// we can resume the download
+//		Log.i(TAG, "resuming upload for " + uploadId);
+//		
+//		// get the cached etags
+//		List<PartETag> cachedEtags = getCachedPartEtags();
+//		partETags.addAll(cachedEtags);
+//					
+//		// calculate the start position for resume
+//		startPartNumber = cachedEtags.size() + 1;
+//		filePosition = (startPartNumber -1) * partSize;
+//		bytesUploaded = filePosition;
+//		
+//		Log.i(TAG, "resuming at part " + startPartNumber + " position " + filePosition);
+//	
+//	} else {
+//		// initiate a new multi part upload
+//		Log.i(TAG, "initiating new upload");
+//		
+//        InitiateMultipartUploadRequest initRequest = new InitiateMultipartUploadRequest(s3bucketName, s3key);
+//        configureInitiateRequest(initRequest);
+//        InitiateMultipartUploadResult initResponse = s3Client.initiateMultipartUpload(initRequest);
+//        uploadId = initResponse.getUploadId();
+//		
+//	}
+//	
+//	final AbortMultipartUploadRequest abortRequest = new AbortMultipartUploadRequest(s3bucketName, s3key, uploadId);
+//    
+//    for (int k = startPartNumber; filePosition < contentLength; k++) {
+//    	
+//        long thisPartSize = Math.min(partSize, (contentLength - filePosition));
+//        
+//        Log.i(TAG, "starting file part " + k + " with size " + thisPartSize);
+//        
+//        UploadPartRequest uploadRequest = new UploadPartRequest().withBucketName(s3bucketName)
+//                .withKey(s3key).withUploadId(uploadId)
+//                .withPartNumber(k).withFileOffset(filePosition).withFile(file)
+//                .withPartSize(thisPartSize);
+//
+//        ProgressListener s3progressListener = new ProgressListener() {
+//            public void progressChanged(ProgressEvent progressEvent) {
+//                
+//            	// bail out if user cancelled
+//            	// TODO calling shutdown too brute force?
+//                if (userInterrupted) {
+//            		s3Client.shutdown(); 
+//            		throw new UploadIterruptedException("User interrupted");
+//            	} else if (userAborted) {
+//            		// aborted requests cannot be resumed, so clear any cached etags
+//            		clearProgressCache();
+//                	s3Client.abortMultipartUpload(abortRequest);
+//                	s3Client.shutdown();
+//                }
+//                
+//                bytesUploaded += progressEvent.getBytesTransfered();
+//                
+//                //Log.d(TAG, "bytesUploaded=" + bytesUploaded);
+//                
+//                // broadcast progress
+//                float fpercent = ((bytesUploaded * 100) / contentLength);
+//                int percent = Math.round(fpercent);
+//                if (progressListener != null) {
+//                	progressListener.progressChanged(progressEvent, bytesUploaded, percent);
+//                }
+//                
+//            }
+//        };
+//        
+//        uploadRequest.setProgressListener(s3progressListener);
+//        
+//        UploadPartResult result = s3Client.uploadPart(uploadRequest);
+//        
+//        partETags.add(result.getPartETag());
+//        
+//        // cache the part progress for this upload
+//        if (k == 1) {
+//        	initProgressCache(uploadId);
+//        }
+//        // store part etag
+//        cachePartEtag(result);
+//        
+//        filePosition += thisPartSize;
+//    }
+//    
+//    CompleteMultipartUploadRequest compRequest = new CompleteMultipartUploadRequest(
+//    		s3bucketName, s3key, uploadId,
+//            partETags);
+//
+//    CompleteMultipartUploadResult result = s3Client.completeMultipartUpload(compRequest);
+//    bytesUploaded = 0;
+//    
+//    Log.i(TAG, "upload complete for " + uploadId);
+//    
+//    clearProgressCache();
+//
+//    return result.getLocation();
+//	
+//}
+//private String getCachedUploadId() {
+//	return prefs.getString(s3key + PREFS_UPLOAD_ID, null);
+//}
+//
+//private List<PartETag> getCachedPartEtags() {
+//	List<PartETag> result = new ArrayList<PartETag>();		
+//	// get the cached etags
+//	ArrayList<String> etags = SharedPreferencesUtils.getStringArrayPref(prefs, s3key + PREFS_ETAGS);
+//	for (String etagString : etags) {
+//		String partNum = etagString.substring(0, etagString.indexOf(PREFS_ETAG_SEP));
+//		String partTag = etagString.substring(etagString.indexOf(PREFS_ETAG_SEP) + 2, etagString.length());
+//					
+//		PartETag etag = new PartETag(Integer.parseInt(partNum), partTag);
+//		result.add(etag);
+//	}
+//	return result;
+//}
+//
+//private void cachePartEtag(UploadPartResult result) {
+//	String serialEtag = result.getPartETag().getPartNumber() + PREFS_ETAG_SEP + result.getPartETag().getETag();
+//	ArrayList<String> etags = SharedPreferencesUtils.getStringArrayPref(prefs, s3key + PREFS_ETAGS);
+//	etags.add(serialEtag);
+//	SharedPreferencesUtils.setStringArrayPref(prefs, s3key + PREFS_ETAGS, etags);
+//}
+//
+//private void initProgressCache(String uploadId) {
+//	// store uploadID
+//	Editor edit = prefs.edit().putString(s3key + PREFS_UPLOAD_ID, uploadId);
+//	SharedPreferencesCompat.apply(edit);
+//	// create empty etag array
+//	ArrayList<String> etags = new ArrayList<String>();
+//	SharedPreferencesUtils.setStringArrayPref(prefs, s3key + PREFS_ETAGS, etags);
+//}
+//
+//private void clearProgressCache() {
+//	// clear the cached uploadId and etags
+//    Editor edit = prefs.edit();
+//    edit.remove(s3key + PREFS_UPLOAD_ID);
+//    edit.remove(s3key + PREFS_ETAGS);
+//	SharedPreferencesCompat.apply(edit);
+//}
+//
+//public void interrupt() {
+//	userInterrupted = true;
+//}
+//
+//public void abort() {
+//	userAborted = true;
+//}
+//
+///**
+// * Override to configure the multipart upload request. 
+// * 
+// * By default uploaded files are publicly readable.
+// * 
+// * @param initRequest S3 request object for the file to be uploaded
+// */
+//protected void configureInitiateRequest(InitiateMultipartUploadRequest initRequest) {
+//	initRequest.setCannedACL(CannedAccessControlList.AuthenticatedRead);
+//}
+//
+//public void setPrefs(SharedPreferences prefs) {
+//	this.prefs = prefs;
+//}
+//
+//public long getPartSize() {
+//	return partSize;
+//}
+//
+//public void setPartSize(long partSize) {
+//	if (partSize < MIN_DEFAULT_PART_SIZE) {
+//		throw new IllegalStateException("Part size is less than S3 minimum of " + MIN_DEFAULT_PART_SIZE);
+//	} else {
+//		this.partSize = partSize;
+//	}	
+//}
+//
+//public void setProgressListener(UploadProgressListener progressListener) {
+//	this.progressListener = progressListener;
+//}
+//
+//public interface UploadProgressListener {
+//	public void progressChanged(ProgressEvent progressEvent, long bytesUploaded, int percentUploaded);
+//}
+

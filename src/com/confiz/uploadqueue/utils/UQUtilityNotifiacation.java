@@ -8,7 +8,7 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.support.v4.app.NotificationCompat;
 
-import com.confiz.uploadqueue.R;
+import com.confiz.downloadqueue.R;
 
 
 /**

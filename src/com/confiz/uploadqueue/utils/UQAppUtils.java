@@ -51,7 +51,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.confiz.uploadqueue.R;
+import com.confiz.downloadqueue.R;
 import com.google.gson.Gson;
 
 /**

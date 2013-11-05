@@ -18,7 +18,7 @@ import com.confiz.downloadqueue.utils.DQAppUtils;
 import com.confiz.downloadqueue.utils.DQDebugHelper;
 import com.confiz.downloadqueue.utils.DQErrors;
 import com.confiz.downloadqueue.utils.DQUtilityNetwork;
-import com.example.downloadqueue.R;
+import com.confiz.downloadqueue.R;
 
 public class DQManager {
 

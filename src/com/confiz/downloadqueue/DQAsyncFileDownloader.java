@@ -20,7 +20,7 @@ import com.confiz.downloadqueue.utils.DQAppUtils;
 import com.confiz.downloadqueue.utils.DQDebugHelper;
 import com.confiz.downloadqueue.utils.DQErrors;
 import com.confiz.downloadqueue.utils.DQExternalStorageHandler;
-import com.example.downloadqueue.R;
+import com.confiz.downloadqueue.R;
 
 public class DQAsyncFileDownloader extends AsyncTask<Void, Integer, Boolean> {
 

@@ -35,7 +35,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.confiz.uploadqueue.R;
+import com.confiz.downloadqueue.R;
 
 public class TouchListView extends ListView {
 

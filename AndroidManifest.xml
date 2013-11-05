@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.downloadqueue"
+    package="com.confiz.downloadqueue"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -37,7 +37,7 @@
         
         
         <receiver
-            android:name=".UQNetworkManger"
+            android:name="com.confiz.uploadqueue.UQNetworkManger"
             android:label="NetworkConnection" >
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -45,7 +45,7 @@
         </receiver>
 
         <service
-            android:name=".UQService"
+            android:name="com.confiz.uploadqueue.UQService"
             android:enabled="true" />
     </application>
 

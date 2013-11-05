@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import android.content.Context;
 import android.content.Intent;
 
+import com.confiz.downloadqueue.R;
 import com.confiz.uploadqueue.db.UQDBAdapter;
 import com.confiz.uploadqueue.interfaces.UQResponseListener;
 import com.confiz.uploadqueue.model.UQActions;
@@ -29,6 +30,8 @@ public class UQManager {
 	private static UQManager uploadingManger = null;
 
 	private boolean destroyQueue = false;
+
+	private String s3AccessKey, s3SecretKey;
 
 
 	private UQManager() {
@@ -143,8 +146,10 @@ public class UQManager {
 		}
 		return status;
 	}
-	
-	public boolean isUploading(UQRequest uploadRequest , Context context){
+
+
+	public boolean isUploading(UQRequest uploadRequest, Context context) {
+
 		String userId = getCurrentUser(context);
 		uploadRequest.setUserId(userId);
 		UQDBAdapter database = UQDBAdapter.getInstance(context);
@@ -267,12 +272,10 @@ public class UQManager {
 
 		try {
 			UQRequest itemToBeStop = getItems(key);
-			if (itemToBeStop == null || itemToBeStop.getStatus() == UQUploadingStatus.DELETE_REQUEST || itemToBeStop
-			        .getStatus() == UQUploadingStatus.DELETED) {
+			if (itemToBeStop == null || itemToBeStop.getStatus() == UQUploadingStatus.DELETE_REQUEST || itemToBeStop.getStatus() == UQUploadingStatus.DELETED) {
 				return true;
 			}
-			itemToBeStop
-			        .setStatus(shouldDeleteFile ? UQUploadingStatus.DELETE_REQUEST : UQUploadingStatus.PAUSED_REQUEST);
+			itemToBeStop.setStatus(shouldDeleteFile ? UQUploadingStatus.DELETE_REQUEST : UQUploadingStatus.PAUSED_REQUEST);
 			updateUploadStatus(itemToBeStop, context);
 			if (shouldDeleteFile) {
 				startDQService(context, UQActions.DELETE_ITEM);
@@ -467,8 +470,8 @@ public class UQManager {
 	public void updateDBandQueue(Context context, String key, UQUploadingStatus status) {
 
 		UQRequest itemToBeRemove = getItems(key);
-		if(itemToBeRemove == null){
-			return ;
+		if (itemToBeRemove == null) {
+			return;
 		}
 		switch (status) {
 			case DELETED:
@@ -501,15 +504,14 @@ public class UQManager {
 			uploadingRequest = getItems(key);
 		}
 		if (uploadingRequest != null) {
-			if (uploadingRequest.getStatus() != UQUploadingStatus.COMPLETED && uploadingRequest
-			        .getStatus() != UQUploadingStatus.DELETED && uploadingRequest.getStatus() != UQUploadingStatus.DELETE_REQUEST) {
+			if (uploadingRequest.getStatus() != UQUploadingStatus.COMPLETED && uploadingRequest.getStatus() != UQUploadingStatus.DELETED && uploadingRequest
+			        .getStatus() != UQUploadingStatus.DELETE_REQUEST) {
 				uploadingRequest.setPartialUploaded(true);
 			} else {
 				uploadingRequest.setPartialUploaded(false);
 			}
-			if (uploadingRequest.getStatus() == UQUploadingStatus.FAILED || uploadingRequest
-			        .getStatus() == UQUploadingStatus.DOWNLOADING || uploadingRequest.getStatus() == UQUploadingStatus.PAUSED || uploadingRequest
-			        .getStatus() == UQUploadingStatus.PAUSED_REQUEST) {
+			if (uploadingRequest.getStatus() == UQUploadingStatus.FAILED || uploadingRequest.getStatus() == UQUploadingStatus.DOWNLOADING || uploadingRequest
+			        .getStatus() == UQUploadingStatus.PAUSED || uploadingRequest.getStatus() == UQUploadingStatus.PAUSED_REQUEST) {
 				uploadingRequest.setPartialUploaded(true);
 			}
 
@@ -600,6 +602,7 @@ public class UQManager {
 		startDQService(context, UQActions.PAUSE_ITEM);
 	}
 
+
 	public boolean deleteAllItemsFromQueue(Context context) {
 
 		destroyQueue = true;
@@ -614,6 +617,7 @@ public class UQManager {
 		startDQService(context, UQActions.REMOVE_ITEM);
 		return flag;
 	}
+
 
 	public boolean isDestoryQueue() {
 
@@ -756,8 +760,7 @@ public class UQManager {
 	 */
 	public static boolean isNotficationOn(Context context) {
 
-		return UQAppPreference
-		        .getBoolean(context, UQAppConstants.KEY_SHOW_NOTIFICATION, UQAppConstants.VALUE_SHOW_NOTIFICATION);
+		return UQAppPreference.getBoolean(context, UQAppConstants.KEY_SHOW_NOTIFICATION, UQAppConstants.VALUE_SHOW_NOTIFICATION);
 
 	}
 
@@ -816,8 +819,7 @@ public class UQManager {
 	 */
 	public static boolean isUploadOnlyOnWifi(Context context) {
 
-		return UQAppPreference
-		        .getBoolean(context, UQAppConstants.KEY_ONLY_ON_WIFI, UQAppConstants.VALUE_ONLY_ON_WIFI);
+		return UQAppPreference.getBoolean(context, UQAppConstants.KEY_ONLY_ON_WIFI, UQAppConstants.VALUE_ONLY_ON_WIFI);
 
 	}
 
@@ -876,8 +878,7 @@ public class UQManager {
 	 */
 	public static int getMaxQueueItemLimit(Context context) {
 
-		return UQAppPreference
-		        .getInt(context, UQAppConstants.KEY_MAX_QUEUE_LIMIT, UQAppConstants.VALUE_MAX_QUEUE_LIMIT);
+		return UQAppPreference.getInt(context, UQAppConstants.KEY_MAX_QUEUE_LIMIT, UQAppConstants.VALUE_MAX_QUEUE_LIMIT);
 	}
 
 
@@ -886,8 +887,7 @@ public class UQManager {
 		if (max <= UQAppConstants.VALUE_MAX_QUEUE_LIMIT) {
 			UQAppPreference.saveInt(context, max, UQAppConstants.KEY_MAX_QUEUE_LIMIT);
 		} else {
-			throw new RuntimeException(
-			        "Max item limit must be less then " + UQAppConstants.VALUE_MAX_QUEUE_LIMIT);
+			throw new RuntimeException("Max item limit must be less then " + UQAppConstants.VALUE_MAX_QUEUE_LIMIT);
 		}
 	}
 
@@ -897,8 +897,7 @@ public class UQManager {
 	 */
 	public static int getMaxRetries(Context context) {
 
-		return UQAppPreference
-		        .getInt(context, UQAppConstants.KEY_NO_OF_RETRIES, UQAppConstants.VALUE_NO_OF_RETRIES);
+		return UQAppPreference.getInt(context, UQAppConstants.KEY_NO_OF_RETRIES, UQAppConstants.VALUE_NO_OF_RETRIES);
 	}
 
 
@@ -917,8 +916,7 @@ public class UQManager {
 	 */
 	public static int getMaxFileSizeAllowed(Context context) {
 
-		return UQAppPreference
-		        .getInt(context, UQAppConstants.KEY_MAX_FILE_SIZE, UQAppConstants.VALUE_MAX_FILE_SIZE);
+		return UQAppPreference.getInt(context, UQAppConstants.KEY_MAX_FILE_SIZE, UQAppConstants.VALUE_MAX_FILE_SIZE);
 	}
 
 
@@ -980,5 +978,53 @@ public class UQManager {
 	private void notifyDataUpdated() {
 
 		UQResponseHolder.getInstance().onDataUpdated();
+	}
+
+
+	/**
+	 * @return the s3AccessKey
+	 */
+	public String getS3AccessKey() {
+
+		return s3AccessKey;
+	}
+
+
+	/**
+	 * @return the s3SecretKey
+	 */
+	public String getS3SecretKey() {
+
+		return s3SecretKey;
+	}
+
+
+	/**
+	 * @param s3AccessKey
+	 *            the s3AccessKey to set
+	 */
+	public void setS3AccessKey(String s3AccessKey) {
+
+		this.s3AccessKey = s3AccessKey;
+	}
+
+
+	/**
+	 * @param s3SecretKey
+	 *            the s3SecretKey to set
+	 */
+	public void setS3SecretKey(String s3SecretKey) {
+
+		this.s3SecretKey = s3SecretKey;
+	}
+
+	/**
+	 * @param s3AccessKey
+	 * @param s3SecretKey
+	 */
+	public void setS3Credientials(String s3AccessKey , String s3SecretKey) {
+
+		this.s3AccessKey = s3AccessKey;
+		this.s3SecretKey = s3SecretKey;
 	}
 }
