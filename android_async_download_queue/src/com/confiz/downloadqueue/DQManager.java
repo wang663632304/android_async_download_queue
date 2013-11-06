@@ -1,24 +1,17 @@
 
 package com.confiz.downloadqueue;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.content.Intent;
-
 import com.confiz.downloadqueue.db.DQDBAdapter;
 import com.confiz.downloadqueue.interfaces.DQResponseListener;
 import com.confiz.downloadqueue.model.DQActions;
 import com.confiz.downloadqueue.model.DQDownloadingStatus;
 import com.confiz.downloadqueue.model.DQQueue;
 import com.confiz.downloadqueue.model.DQRequest;
-import com.confiz.downloadqueue.utils.DQAppConstants;
-import com.confiz.downloadqueue.utils.DQAppPreference;
-import com.confiz.downloadqueue.utils.DQAppUtils;
-import com.confiz.downloadqueue.utils.DQDebugHelper;
-import com.confiz.downloadqueue.utils.DQErrors;
-import com.confiz.downloadqueue.utils.DQUtilityNetwork;
-import com.confiz.downloadqueue.R;
+import com.confiz.downloadqueue.utils.*;
+
+import java.util.ArrayList;
 
 public class DQManager {
 
@@ -315,14 +308,14 @@ public class DQManager {
 
 	public boolean canDownloadFurthurItems(Context context) {
 
-		boolean flag = false;
+		boolean flag;
 		flag = isLimitAvailable(context);
-		if (flag == true) {
+		if (flag) {
 			DQRequest data = getItemWithStatus(DQDownloadingStatus.DOWNLOAD_REQUEST);
 			if (data == null) {
 				data = getItemWithStatus(DQDownloadingStatus.WAITING);
 				if (data == null) {
-					if (DQUtilityNetwork.isNetworkAvailable(context) == true) {
+					if (DQUtilityNetwork.isNetworkAvailable(context)) {
 						data = getItemWithStatus(DQDownloadingStatus.FAILED);
 						if (data == null) {
 							flag = false;
