@@ -19,7 +19,7 @@ To use this library project you will be needing following permissions
 
 Authors
 ======
-* Arslan Anwar <arslan.anwar@confiz.com>
+* Arslan Anwar (arslan.anwar@confiz.com)
 * Raheel Arif (raheel.arif@confiz.com)
 
 Copyright:: 2013, Confiz, (http://www.confiz.com)
