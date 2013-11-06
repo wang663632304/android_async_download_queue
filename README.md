@@ -15,9 +15,6 @@ To use this library project you will be needing following permissions
 - android.permission.INTERNET
 - android.permission.WRITE_EXTERNAL_STORAGE
 
-Developed By
-------------
-
 
 
 Authors
