@@ -6,25 +6,23 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+        android:targetSdkVersion="16" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.confiz.downloadqueue.MainActivity"
-            android:label="@string/app_name" >
+        <activity android:name="ACTIVITY_ENTRY_NAME"
+                  android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
         <receiver
-            android:name="com.confiz.downloadqueue.DQNetworkManger"
+            android:name=".DQNetworkManger"
             android:label="NetworkConnection" >
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -32,7 +30,7 @@
         </receiver>
 
         <service
-            android:name="com.confiz.downloadqueue.DQService"
+            android:name=".DQService"
             android:enabled="true" />
     </application>
 
