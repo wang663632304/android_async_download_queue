@@ -73,5 +73,6 @@
     <string name="error_msg_database_not_found">Database not found. Please restart application.</string>
     <string name="error_msg_retrieving_credits">An error occurred while retrieving Audio Credits. Please try again.</string>
     <string name="msg_s3_time_skew">Please verify device date/time is set correctly and try again.</string>
+    <string name="error_msg_user_stoped">Uploading canceled by user.</string>
 
 </resources>

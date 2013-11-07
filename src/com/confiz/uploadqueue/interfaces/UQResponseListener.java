@@ -7,19 +7,19 @@ public interface UQResponseListener {
 
 	public void onUploadStart(String key);
 
-	public void updateProgress(String key, int progress);
+	public void updateUploadingProgress(String key, int progress);
 
-	public void onErrorOccurred(String key, UQErrors errorNo);
+	public void onUploadingFailer(String key, UQErrors errorNo);
 
-	public void onComplete(String key);
+	public void onUploadingCompleted(String key);
 
 	public void updateUploadingEstimates(String key, String details[]);
 
-	public void onDataUpdated();
+	public void onUploadingDataUpdated();
 
-	public void updateStatusOf(UQRequest UploadingReques);
+	public void updateUploadingStatusOf(UQRequest UploadingReques);
 
 	public UQRequest getUploadingRequester();
 
-	public void updateFileExistanceStatusInDB(UQRequest dRequest);
+	public void updateUploadingStatusInDB(UQRequest dRequest);
 }

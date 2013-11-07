@@ -24,7 +24,7 @@ import com.confiz.uploadqueue.utils.UQErrors;
  * 
  * @see DataSetChangeEvent
  */
-public class UQResponseHolder {
+class UQResponseHolder {
 
 
 	private static UQResponseHolder instance;
@@ -159,7 +159,7 @@ public class UQResponseHolder {
 	public void updateProgress(String key, int progress) {
 
 		for (final UQResponseListener change : listenerList) {
-			change.updateProgress(key, progress);
+			change.updateUploadingProgress(key, progress);
 		}
 	}
 
@@ -174,7 +174,7 @@ public class UQResponseHolder {
 	public void onErrorOccurred(String key, UQErrors errorNo) {
 
 		for (final UQResponseListener change : listenerList) {
-			change.onErrorOccurred(key, errorNo);
+			change.onUploadingFailer(key, errorNo);
 		}
 	}
 
@@ -188,7 +188,7 @@ public class UQResponseHolder {
 	public void onComplete(String key) {
 
 		for (final UQResponseListener change : listenerList) {
-			change.onComplete(key);
+			change.onUploadingCompleted(key);
 		}
 	}
 
@@ -214,7 +214,7 @@ public class UQResponseHolder {
 	public void onDataUpdated() {
 
 		for (final UQResponseListener change : listenerList) {
-			change.onDataUpdated();
+			change.onUploadingDataUpdated();
 		}
 	}
 
@@ -237,7 +237,7 @@ public class UQResponseHolder {
 	public void updateStatusOf(UQRequest uploadingRequest) {
 
 		for (final UQResponseListener change : listenerList) {
-			change.updateStatusOf(uploadingRequest);
+			change.updateUploadingStatusOf(uploadingRequest);
 		}
 	}
 
@@ -248,7 +248,7 @@ public class UQResponseHolder {
 	public void updateFileExistanceStatusInDB(UQRequest dRequest) {
 
 		for (final UQResponseListener change : listenerList) {
-			change.updateFileExistanceStatusInDB(dRequest);
+			change.updateUploadingStatusInDB(dRequest);
 		}
 	}
 }

@@ -23,7 +23,7 @@ import com.confiz.uploadqueue.utils.UQUtilityNetwork;
 public class UQManager {
 
 
-	private final String TAG = "UploadingQueueManger";
+	//private final String TAG = "UploadingQueueManger";
 
 	private UQQueue uploadQueue = null;
 
@@ -46,7 +46,7 @@ public class UQManager {
 			uploadingManger = new UQManager();
 			uploadingManger.getDataFromDatabse(context);
 			uploadingManger.updateMangerForData(context);
-			startDQService(context, UQActions.START_DOWNLOAD);
+			startUQService(context, UQActions.START_DOWNLOAD);
 		}
 		if (uploadingManger.uploadQueue.isEmpty()) {
 			uploadingManger.getDataFromDatabse(context);
@@ -80,7 +80,7 @@ public class UQManager {
 			}
 		}
 		notifyDataUpdated();
-		startDQService(context, UQActions.START_DOWNLOAD);
+		startUQService(context, UQActions.START_DOWNLOAD);
 	}
 
 
@@ -93,7 +93,7 @@ public class UQManager {
 				String tempSku = itemToBeRemove.getKey();
 				String userId = getCurrentUser(context);
 				if (tempSku != null && tempSku.length() > 0) {
-					result = UQDBAdapter.getInstance(context).deleteDQRequest(itemToBeRemove, userId);
+					result = UQDBAdapter.getInstance(context).deleteUQRequest(itemToBeRemove, userId);
 					UQResponseHolder.getInstance().updateFileExistanceStatusInDB(itemToBeRemove);
 					if (result == true) {
 						uploadQueue.remove(itemToBeRemove);
@@ -123,7 +123,7 @@ public class UQManager {
 			uploadQueue.clear();
 			notifyDataUpdated();
 		}
-		startDQService(context, UQActions.STOP_DQ);
+		startUQService(context, UQActions.STOP_DQ);
 		return flag;
 	}
 
@@ -166,7 +166,7 @@ public class UQManager {
 		try {
 			String userId = getCurrentUser(context);
 			if (context != null) {
-				flag = UQDBAdapter.getInstance(context).updateDQRequestData(dRequest, userId);
+				flag = UQDBAdapter.getInstance(context).updateUQRequestData(dRequest, userId);
 				UQResponseHolder.getInstance().updateFileExistanceStatusInDB(dRequest);
 			}
 		} catch (Exception exception) {
@@ -278,9 +278,9 @@ public class UQManager {
 			itemToBeStop.setStatus(shouldDeleteFile ? UQUploadingStatus.DELETE_REQUEST : UQUploadingStatus.PAUSED_REQUEST);
 			updateUploadStatus(itemToBeStop, context);
 			if (shouldDeleteFile) {
-				startDQService(context, UQActions.DELETE_ITEM);
+				startUQService(context, UQActions.DELETE_ITEM);
 			} else {
-				startDQService(context, UQActions.PAUSE_ITEM);
+				startUQService(context, UQActions.PAUSE_ITEM);
 			}
 		} catch (Exception exception) {
 			UQDebugHelper.printException(exception);
@@ -294,7 +294,7 @@ public class UQManager {
 		UQRequest itemToBeStart = getItems(key);
 		itemToBeStart.setStatus(UQUploadingStatus.DOWNLOAD_REQUEST);
 		updateUploadStatus(itemToBeStart, context);
-		startDQService(context, UQActions.START_DOWNLOAD);
+		startUQService(context, UQActions.START_DOWNLOAD);
 		return true;
 	}
 
@@ -304,7 +304,7 @@ public class UQManager {
 		UQRequest itemToBeStart = getItems(key);
 		itemToBeStart.setStatus(UQUploadingStatus.DOWNLOAD_REQUEST);
 		updateUploadStatus(itemToBeStart, context);
-		startDQService(context, UQActions.START_DOWNLOAD_FROM_PAUSE);
+		startUQService(context, UQActions.START_DOWNLOAD_FROM_PAUSE);
 		return true;
 	}
 
@@ -394,7 +394,7 @@ public class UQManager {
 	}
 
 
-	public static void startDQService(Context context, UQActions action) {
+	public static void startUQService(Context context, UQActions action) {
 
 		Intent intent = new Intent();
 		intent.setClass(context, UQService.class);
@@ -493,7 +493,7 @@ public class UQManager {
 			default:
 				break;
 		}
-		startDQService(context, UQActions.START_DOWNLOAD);
+		startUQService(context, UQActions.START_DOWNLOAD);
 		updateMangerAndNotify(key, itemToBeRemove);
 	}
 
@@ -579,7 +579,7 @@ public class UQManager {
 				UQRequest request = uploadQueue.get(i);
 				updateMangerAndNotify(request.getKey(), request);
 			}
-			startDQService(context, UQActions.START_DOWNLOAD);
+			startUQService(context, UQActions.START_DOWNLOAD);
 		}
 	}
 
@@ -599,7 +599,7 @@ public class UQManager {
 				temp.setStatus(UQUploadingStatus.PAUSED_REQUEST);
 			}
 		}
-		startDQService(context, UQActions.PAUSE_ITEM);
+		startUQService(context, UQActions.PAUSE_ITEM);
 	}
 
 
@@ -614,7 +614,7 @@ public class UQManager {
 			uploadQueue.clear();
 			notifyDataUpdated();
 		}
-		startDQService(context, UQActions.REMOVE_ITEM);
+		startUQService(context, UQActions.REMOVE_ITEM);
 		return flag;
 	}
 
@@ -957,22 +957,39 @@ public class UQManager {
 	}
 
 
-	public void addDQResponseListiner(UQResponseListener listener) {
+	public void addUQResponseListiner(UQResponseListener listener) {
 
 		UQResponseHolder.getInstance().addListener(listener);
 	}
 
 
-	public void removeDQResponseListiner(UQResponseListener listener) {
+	public void removeUQResponseListiner(UQResponseListener listener) {
 
 		UQResponseHolder.getInstance().removeListener(listener);
 	}
 
 
-	public void removeAllDQResponseListiner(UQResponseListener listener) {
+	public void removeAllUQResponseListiner(UQResponseListener listener) {
 
 		UQResponseHolder.getInstance().removeAllListener();
 	}
+	
+	public boolean contain(UQResponseListener listener) {
+		return UQResponseHolder.getInstance().contain(listener);
+	}
+
+
+	/**
+	 * Replace.
+	 * 
+	 * @param listener
+	 *            the listener
+	 */
+	public void replace(UQResponseListener listener) {
+
+		UQResponseHolder.getInstance().replace(listener);
+	}
+
 
 
 	private void notifyDataUpdated() {

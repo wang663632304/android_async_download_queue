@@ -20,18 +20,16 @@ import com.amazonaws.services.s3.model.InitiateMultipartUploadRequest;
 import com.amazonaws.services.s3.model.InitiateMultipartUploadResult;
 import com.amazonaws.services.s3.model.PartETag;
 import com.amazonaws.services.s3.model.ProgressEvent;
+import com.amazonaws.services.s3.model.ProgressListener;
 import com.amazonaws.services.s3.model.UploadPartRequest;
 import com.amazonaws.services.s3.model.UploadPartResult;
-import com.confiz.uploadqueue.interfaces.UQRequestHanlder;
 import com.confiz.uploadqueue.interfaces.UQResponseListener;
 import com.confiz.uploadqueue.model.UQRequest;
 import com.confiz.uploadqueue.utils.SharedPreferencesCompat;
 import com.confiz.uploadqueue.utils.SharedPreferencesUtils;
 import com.confiz.uploadqueue.utils.UQDebugHelper;
 import com.confiz.uploadqueue.utils.UQErrors;
-import com.confiz.uploadqueue.utils.UQExternalStorageHandler;
 import com.confiz.uploadqueue.utils.UQUtilityNetwork;
-import com.confiz.uploadqueue.utils.UploadIterruptedException;
 
 public class UQFileUploader extends Thread {
 
@@ -86,7 +84,7 @@ public class UQFileUploader extends Thread {
 	private boolean userAborted = false;
 
 
-	public UQFileUploader(Context context, UQRequestHanlder listener, UQRequest data, UQResponseListener queueListener) {
+	public UQFileUploader(Context context, UQResponseListener listener, UQRequest data, UQResponseListener queueListener) {
 
 		mContext = context;
 		request = data;
@@ -120,6 +118,7 @@ public class UQFileUploader extends Thread {
 		Boolean uploadStatus = false;
 		File destinationFile = new File(request.getFilePath());
 		if(destinationFile != null){
+			file = destinationFile;
 			fileSize = destinationFile.length();
 		}
 		
@@ -128,70 +127,64 @@ public class UQFileUploader extends Thread {
 		try {
 			// initialize
 			List<PartETag> partETags = new ArrayList<PartETag>();
-			final long contentLength = destinationFile.length();
+			final long contentLength = file.length();
 			long filePosition = 0;
 			int startPartNumber = 1;
-
+			
 			userInterrupted = false;
 			userAborted = false;
 			bytesUploaded = 0;
-
-			// check if we can resume an incomplete upload
-			String uploadId = getCachedUploadId();//request.getKey();
-
+			
+			// check if we can resume an incomplete download
+			String uploadId = getCachedUploadId();
+			
 			if (uploadId != null) {
-				// we can resume the upload
+				// we can resume the download
 				Log.i(TAG, "resuming upload for " + uploadId);
-
+				
 				// get the cached etags
 				List<PartETag> cachedEtags = getCachedPartEtags();
 				partETags.addAll(cachedEtags);
-
+							
 				// calculate the start position for resume
 				startPartNumber = cachedEtags.size() + 1;
-				filePosition = (startPartNumber - 1) * partSize;
+				filePosition = (startPartNumber -1) * partSize;
 				bytesUploaded = filePosition;
-
-				Log.i(TAG, "resuming at part " + startPartNumber + " position "
-						+ filePosition);
+				
+				Log.i(TAG, "resuming at part " + startPartNumber + " position " + filePosition);
 				startingTime = System.currentTimeMillis();
 			} else {
 				// initiate a new multi part upload
 				Log.i(TAG, "initiating new upload");
-
-				InitiateMultipartUploadRequest initRequest = new InitiateMultipartUploadRequest(
-						s3bucketName, s3FileName);
-				configureInitiateRequest(initRequest);
-				InitiateMultipartUploadResult initResponse = s3Client
-						.initiateMultipartUpload(initRequest);
-				uploadId = initResponse.getUploadId();
-				startingTime = System.currentTimeMillis();
-			}
-
-			final AbortMultipartUploadRequest abortRequest = new AbortMultipartUploadRequest(
-					s3bucketName, s3FileName, uploadId);
-
-			for (int k = startPartNumber; filePosition < contentLength; k++) {
-
-				long thisPartSize = Math.min(partSize,
-						(contentLength - filePosition));
-
-				Log.i(TAG, "starting file part " + k + " with size " + thisPartSize);
-
-				UploadPartRequest uploadRequest = new UploadPartRequest()
-						.withBucketName(s3bucketName).withKey(s3FileName)
-						.withUploadId(uploadId).withPartNumber(k)
-						.withFileOffset(filePosition).withFile(file)
-						.withPartSize(thisPartSize);
 				
-				com.amazonaws.services.s3.model.ProgressListener s3progressListener = new com.amazonaws.services.s3.model.ProgressListener() {
-					public void progressChanged(ProgressEvent progressEvent) {
-
-						// bail out if user cancelled
+		        InitiateMultipartUploadRequest initRequest = new InitiateMultipartUploadRequest(s3bucketName, s3FileName);
+		        configureInitiateRequest(initRequest);
+		        InitiateMultipartUploadResult initResponse = s3Client.initiateMultipartUpload(initRequest);
+		        uploadId = initResponse.getUploadId();
+		        startingTime = System.currentTimeMillis();
+			}
+			
+			final AbortMultipartUploadRequest abortRequest = new AbortMultipartUploadRequest(s3bucketName, s3FileName, uploadId);
+		    
+		    for (int k = startPartNumber; filePosition < contentLength; k++) {
+		    	
+		        long thisPartSize = Math.min(partSize, (contentLength - filePosition));
+		        
+		        Log.i(TAG, "starting file part " + k + " with size " + thisPartSize);
+		        
+		        UploadPartRequest uploadRequest = new UploadPartRequest().withBucketName(s3bucketName)
+		                .withKey(s3FileName).withUploadId(uploadId)
+		                .withPartNumber(k).withFileOffset(filePosition).withFile(file)
+		                .withPartSize(thisPartSize);
+		
+		        ProgressListener s3progressListener = new ProgressListener() {
+		            public void progressChanged(ProgressEvent progressEvent) {
+		                
+		            	// bail out if user cancelled
 						// TODO calling shutdown too brute force?
 						if (userInterrupted) {
 							s3Client.shutdown();
-							throw new UploadIterruptedException("User interrupted");
+							//throw new UploadIterruptedException("User interrupted");
 						} else if (userAborted) {
 							// aborted requests cannot be resumed, so clear any
 							// cached etags
@@ -203,43 +196,39 @@ public class UQFileUploader extends Thread {
 						bytesUploaded += progressEvent.getBytesTransferred();
 						realTotal += progressEvent.getBytesTransferred();
 						onProgressRecived();
-					}
-				};
+		            }
+		        };
+		        
+		        uploadRequest.setProgressListener(s3progressListener);
+		        
+		        UploadPartResult result = s3Client.uploadPart(uploadRequest);
+		        
+		        partETags.add(result.getPartETag());
+		        
+		        // cache the part progress for this upload
+		        if (k == 1) {
+		        	initProgressCache(uploadId);
+		        }
+		        // store part etag
+		        cachePartEtag(result);
+		        
+		        filePosition += thisPartSize;
+		    }
+		    
+		    CompleteMultipartUploadRequest compRequest = new CompleteMultipartUploadRequest(
+		    		s3bucketName, s3FileName, uploadId,
+		            partETags);
+		
+		    CompleteMultipartUploadResult result = s3Client.completeMultipartUpload(compRequest);
+		    bytesUploaded = 0;
+		    
+		    Log.i(TAG, "upload complete for " + uploadId);
+		    uploadStatus = true;
+		    clearProgressCache();
 
-				uploadRequest.setProgressListener(s3progressListener);
-
-				UploadPartResult result = s3Client.uploadPart(uploadRequest);
-
-				partETags.add(result.getPartETag());
-
-				// cache the part progress for this upload
-				if (k == 1) {
-					initProgressCache(uploadId);
-				}
-				// store part etag
-				cachePartEtag(result);
-
-				filePosition += thisPartSize;
-			}
-
-			CompleteMultipartUploadRequest compRequest = new CompleteMultipartUploadRequest(
-					s3bucketName, s3FileName, uploadId, partETags);
-
-			CompleteMultipartUploadResult result = s3Client
-					.completeMultipartUpload(compRequest);
-			bytesUploaded = 0;
-
-			Log.i(TAG, "upload complete for " + uploadId);
-
-			clearProgressCache();
-
-			uploadedFileURL =  result.getLocation();
-
-		} catch (final Exception exception) {
-			UQDebugHelper.printAndTrackException(this.mContext, exception);
-		}
-		uploadingSucess = uploadStatus;
-
+        } catch (Exception exception) {
+        	exception.printStackTrace();
+        }
 		onPostExecute(uploadStatus);
 	}
 	
@@ -252,11 +241,12 @@ public class UQFileUploader extends Thread {
 	
 	private void onProgressRecived(){
 		// Log.d(TAG, "bytesUploaded=" + bytesUploaded);
+		updateCounter++;
 		if (updateCounter >= this.updateAfterThisTimeIteration) {
 			updateCounter = 0;
 			float fpercent = ((bytesUploaded * 100) / fileSize);
 			int percent = Math.round(fpercent);
-			queueListener.updateProgress(request.getKey() , percent);
+			queueListener.updateUploadingProgress(request.getKey() , percent);
 			final String[] allEstimatedData = UQUtilityNetwork
 			        .getUploadingEstimates(startingTime, (int) fileSize, (int) bytesUploaded, realTotal);
 			allEstimatedData[4] = "" + percent;
@@ -273,18 +263,19 @@ public class UQFileUploader extends Thread {
 			updateRequestStatus();
 			updateRequestItemNewData();
 
-			String key = request.getKey();
-
 			this.updateStatusAndDeletFile(this.shouldDeleteFile);
 			
 			if (UploadingCompleted) {
-				this.queueListener.onComplete(request.getKey());
+				this.queueListener.onUploadingCompleted(request.getKey());
 			} else {
 
 				if (whichMessageToDisplay == UQErrors.NO_ERROR && request.currentError != UQErrors.NO_ERROR) {
 					whichMessageToDisplay = request.currentError;
 				}
-				queueListener.onErrorOccurred(request.getKey(), whichMessageToDisplay);
+				queueListener.onUploadingFailer(request.getKey(), whichMessageToDisplay);
+			}
+			if(s3Client != null){
+				s3Client.shutdown();
 			}
 		} catch (Exception exception) {
 			UQDebugHelper.printAndTrackException(mContext, TAG, exception);
@@ -312,28 +303,22 @@ public class UQFileUploader extends Thread {
 
 
 	public void updateStatusAndDeletFile(boolean shouldDeleteFile) {
-
+		
 		request.setUploading(false);
-		String filePath = request.getFilePath();
-		if (filePath != null && filePath.length() > 0) {
-			File fileToDelete = new File(filePath);
 
-			if (fileToDelete.exists() && fileToDelete.isFile()) {
-				if (shouldDeleteFile == false) {
-					if (fileToDelete.length() > UQExternalStorageHandler.SIZE_KB * 300) {
-						request.setPartialUploaded(true);
-						// UQDBAdapter.getInstance(mContext).updateFileExistanceStatusInDB(request);
-						request.setUploadedSize(fileToDelete.length());
-						updateRequestItemNewData();
-					}
-				} else {
-					fileToDelete.delete();
-					request.setPartialUploaded(false);
-					request.setTotalSize(0);
-					request.setUploadedSize(0);
-					updateRequestItemData();
-				}
+		if (shouldDeleteFile == false) {
+			if (bytesUploaded > 0) {
+				userInterrupted = true;
+				request.setPartialUploaded(true);
+				request.setUploadedSize(bytesUploaded);
+				updateRequestItemNewData();
 			}
+		} else {
+			userAborted = true;
+			request.setPartialUploaded(false);
+			request.setTotalSize(0);
+			request.setUploadedSize(0);
+			updateRequestItemData();
 		}
 	}
 
@@ -347,7 +332,7 @@ public class UQFileUploader extends Thread {
 		}
 		currentCompletedProgress = progressPercentage;
 		if (queueListener != null) {
-			queueListener.updateProgress(request.getKey(), progressPercentage);
+			queueListener.updateUploadingProgress(request.getKey(), progressPercentage);
 			request.setProgress(progressPercentage);
 		}
 	}
@@ -381,21 +366,21 @@ public class UQFileUploader extends Thread {
 
 	public void updateRequestStatus() {
 
-		String filePath = request.getFilePath();
-		if (filePath != null && filePath.length() > 0) {
-			File fileToDelete = new File(filePath);
-
-			if (fileToDelete.exists() && fileToDelete.isFile()) {
-				if (shouldDeleteFile == false) {
-					if (fileToDelete.length() > UQExternalStorageHandler.SIZE_KB * 300) {
-						request.setUploadedSize(fileToDelete.length());
-						if (fileSize > 0) {
-							request.setTotalSize(fileSize);
-						}
-					}
-				}
-			}
-		}
+//		String filePath = request.getFilePath();
+//		if (filePath != null && filePath.length() > 0) {
+//			File fileToDelete = new File(filePath);
+//
+//			if (fileToDelete.exists() && fileToDelete.isFile()) {
+//				if (shouldDeleteFile == false) {
+//					if (fileToDelete.length() > UQExternalStorageHandler.SIZE_KB * 300) {
+//						request.setUploadedSize(fileToDelete.length());
+//						if (fileSize > 0) {
+//							request.setTotalSize(fileSize);
+//						}
+//					}
+//				}
+//			}
+//		}
 	}
 
 
@@ -423,6 +408,7 @@ public class UQFileUploader extends Thread {
 	public void cancel(boolean shouldKill) {
 
 		stopUploading = true;
+		this.whichMessageToDisplay = UQErrors.USER_CACELED;
 		updateStatusAndDeletFile(shouldDeleteFile);
 	}
 	
@@ -556,7 +542,7 @@ public class UQFileUploader extends Thread {
 ////	    Upload uploader = manager.upload(por);
 ////	    if(uploader != null){
 ////
-////	        final AbortMultipartUploadRequest abortRequest = new AbortMultipartUploadRequest(s3bucketName, s3key, file.getName());
+////	        final AbortMultipartUploadRequest abortRequest = new AbortMultipartUploadRequest(s3bucketName, s3FileName, file.getName());
 ////	        
 ////	        ProgressListener s3progressListener = new ProgressListener() {
 ////	            public void progressChanged(ProgressEvent progressEvent) {
@@ -642,14 +628,14 @@ public class UQFileUploader extends Thread {
 //		// initiate a new multi part upload
 //		Log.i(TAG, "initiating new upload");
 //		
-//        InitiateMultipartUploadRequest initRequest = new InitiateMultipartUploadRequest(s3bucketName, s3key);
+//        InitiateMultipartUploadRequest initRequest = new InitiateMultipartUploadRequest(s3bucketName, s3FileName);
 //        configureInitiateRequest(initRequest);
 //        InitiateMultipartUploadResult initResponse = s3Client.initiateMultipartUpload(initRequest);
 //        uploadId = initResponse.getUploadId();
 //		
 //	}
 //	
-//	final AbortMultipartUploadRequest abortRequest = new AbortMultipartUploadRequest(s3bucketName, s3key, uploadId);
+//	final AbortMultipartUploadRequest abortRequest = new AbortMultipartUploadRequest(s3bucketName, s3FileName, uploadId);
 //    
 //    for (int k = startPartNumber; filePosition < contentLength; k++) {
 //    	
@@ -658,7 +644,7 @@ public class UQFileUploader extends Thread {
 //        Log.i(TAG, "starting file part " + k + " with size " + thisPartSize);
 //        
 //        UploadPartRequest uploadRequest = new UploadPartRequest().withBucketName(s3bucketName)
-//                .withKey(s3key).withUploadId(uploadId)
+//                .withKey(s3FileName).withUploadId(uploadId)
 //                .withPartNumber(k).withFileOffset(filePosition).withFile(file)
 //                .withPartSize(thisPartSize);
 //
@@ -708,7 +694,7 @@ public class UQFileUploader extends Thread {
 //    }
 //    
 //    CompleteMultipartUploadRequest compRequest = new CompleteMultipartUploadRequest(
-//    		s3bucketName, s3key, uploadId,
+//    		s3bucketName, s3FileName, uploadId,
 //            partETags);
 //
 //    CompleteMultipartUploadResult result = s3Client.completeMultipartUpload(compRequest);
@@ -722,13 +708,13 @@ public class UQFileUploader extends Thread {
 //	
 //}
 //private String getCachedUploadId() {
-//	return prefs.getString(s3key + PREFS_UPLOAD_ID, null);
+//	return prefs.getString(s3FileName + PREFS_UPLOAD_ID, null);
 //}
 //
 //private List<PartETag> getCachedPartEtags() {
 //	List<PartETag> result = new ArrayList<PartETag>();		
 //	// get the cached etags
-//	ArrayList<String> etags = SharedPreferencesUtils.getStringArrayPref(prefs, s3key + PREFS_ETAGS);
+//	ArrayList<String> etags = SharedPreferencesUtils.getStringArrayPref(prefs, s3FileName + PREFS_ETAGS);
 //	for (String etagString : etags) {
 //		String partNum = etagString.substring(0, etagString.indexOf(PREFS_ETAG_SEP));
 //		String partTag = etagString.substring(etagString.indexOf(PREFS_ETAG_SEP) + 2, etagString.length());
@@ -741,25 +727,25 @@ public class UQFileUploader extends Thread {
 //
 //private void cachePartEtag(UploadPartResult result) {
 //	String serialEtag = result.getPartETag().getPartNumber() + PREFS_ETAG_SEP + result.getPartETag().getETag();
-//	ArrayList<String> etags = SharedPreferencesUtils.getStringArrayPref(prefs, s3key + PREFS_ETAGS);
+//	ArrayList<String> etags = SharedPreferencesUtils.getStringArrayPref(prefs, s3FileName + PREFS_ETAGS);
 //	etags.add(serialEtag);
-//	SharedPreferencesUtils.setStringArrayPref(prefs, s3key + PREFS_ETAGS, etags);
+//	SharedPreferencesUtils.setStringArrayPref(prefs, s3FileName + PREFS_ETAGS, etags);
 //}
 //
 //private void initProgressCache(String uploadId) {
 //	// store uploadID
-//	Editor edit = prefs.edit().putString(s3key + PREFS_UPLOAD_ID, uploadId);
+//	Editor edit = prefs.edit().putString(s3FileName + PREFS_UPLOAD_ID, uploadId);
 //	SharedPreferencesCompat.apply(edit);
 //	// create empty etag array
 //	ArrayList<String> etags = new ArrayList<String>();
-//	SharedPreferencesUtils.setStringArrayPref(prefs, s3key + PREFS_ETAGS, etags);
+//	SharedPreferencesUtils.setStringArrayPref(prefs, s3FileName + PREFS_ETAGS, etags);
 //}
 //
 //private void clearProgressCache() {
 //	// clear the cached uploadId and etags
 //    Editor edit = prefs.edit();
-//    edit.remove(s3key + PREFS_UPLOAD_ID);
-//    edit.remove(s3key + PREFS_ETAGS);
+//    edit.remove(s3FileName + PREFS_UPLOAD_ID);
+//    edit.remove(s3FileName + PREFS_ETAGS);
 //	SharedPreferencesCompat.apply(edit);
 //}
 //

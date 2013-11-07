@@ -58,7 +58,7 @@ public class UQNetworkManger extends BroadcastReceiver {
 			boolean flag = UQDBAdapter.getInstance(context).isItemAvilableForUpload(userId);
 			if (flag == true) {
 				UQManager.getInstance(context);
-				UQManager.startDQService(context, UQActions.START_DOWNLOAD);
+				UQManager.startUQService(context, UQActions.START_DOWNLOAD);
 			}
 		}
 	}

@@ -61,7 +61,7 @@ public enum UQErrors {
 	/** The smugmug session expired. */
 	SMUGMUG_SESSION_EXPIRED(R.string.error_msg_smugmug_session_expired),
 	/** The V2_ sessio n_ expired. */
-	V2_SESSION_EXPIRED(R.string.error_msg_session_expired);
+	V2_SESSION_EXPIRED(R.string.error_msg_session_expired) , USER_CACELED(R.string.error_msg_username_or_password_empty);
 
 	/** The error value. */
 	private int errorValue;

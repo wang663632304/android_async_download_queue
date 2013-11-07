@@ -56,15 +56,15 @@ public class UQService extends Service {
 
 
 	@Override
-	public void onStart(Intent intent, int startId) {
-
-		super.onStart(intent, startId);
+	public int onStartCommand(Intent intent, int flag , int startId) {
+		super.onStartCommand(intent, flag, startId);
+		
 		try {
 			if (mContext == null) {
 				mContext = this;
 			}
 			if (intent == null || intent.getExtras() == null || intent.hasExtra(extraParameterName) == false) {
-				return;
+				return -1;
 			}
 			UQActions action = UQActions.get(intent.getIntExtra(extraParameterName, 0));
 			UQManager dqm = UQManager.getInstance(mContext);
@@ -99,6 +99,7 @@ public class UQService extends Service {
 		} catch (Exception exception) {
 			UQDebugHelper.printAndTrackException(mContext, exception);
 		}
+		return -1;
 	}
 
 
@@ -244,7 +245,7 @@ public class UQService extends Service {
 
 
 		@Override
-		public void updateProgress(String key, int progress) {
+		public void updateUploadingProgress(String key, int progress) {
 
 			if (UQResponseHolder.getInstance() != null) {
 				UQResponseHolder.getInstance().updateProgress(key, progress);
@@ -277,7 +278,7 @@ public class UQService extends Service {
 
 
 		@Override
-		public void onErrorOccurred(String key, UQErrors errorNo) {
+		public void onUploadingFailer(String key, UQErrors errorNo) {
 
 			if (dqKeysRequestsHashMap != null) {
 				if (dqKeysRequestsHashMap.containsKey(key)) {
@@ -322,7 +323,7 @@ public class UQService extends Service {
 
 
 		@Override
-		public void onComplete(String key) {
+		public void onUploadingCompleted(String key) {
 
 			UQManager manager = UQManager.getInstance(mContext);
 			UQRequest testRequest = manager.getItems(key);
@@ -368,13 +369,13 @@ public class UQService extends Service {
 
 
 		@Override
-		public void onDataUpdated() {
+		public void onUploadingDataUpdated() {
 
 		}
 
 
 		@Override
-		public void updateStatusOf(UQRequest uploadingReques) {
+		public void updateUploadingStatusOf(UQRequest uploadingReques) {
 
 			// TODO Auto-generated method stub
 
@@ -382,7 +383,7 @@ public class UQService extends Service {
 
 
 		@Override
-		public void updateFileExistanceStatusInDB(UQRequest dRequest) {
+		public void updateUploadingStatusInDB(UQRequest dRequest) {
 
 			// TODO Auto-generated method stub
 

@@ -290,7 +290,7 @@ public class UQDBAdapter {
 	}
 
 
-	public boolean deleteDQRequest(UQRequest dRequest, String userId) {
+	public boolean deleteUQRequest(UQRequest dRequest, String userId) {
 
 		boolean flag = false;
 		String query = "DELETE FROM  " + UQRequest.GEN_TABLE_NAME + " WHERE " + UQRequest.GEN_FIELD_KEY + " = '" + dRequest
@@ -439,7 +439,7 @@ public class UQDBAdapter {
 	}
 
 
-	public boolean updateDQRequestData(UQRequest dRequest, String userId) {
+	public boolean updateUQRequestData(UQRequest dRequest, String userId) {
 
 		boolean flag = false;
 

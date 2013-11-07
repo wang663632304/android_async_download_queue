@@ -3,6 +3,7 @@ package com.confiz.downloadqueue.model;
 
 import com.confiz.downloadqueue.utils.DQAppConstants;
 import com.confiz.downloadqueue.utils.DQErrors;
+import com.confiz.uploadqueue.model.UQUploadingStatus;
 
 public class DQRequest extends com.antlersoft.android.dbimpl.ImplementationBase {
 
@@ -686,6 +687,24 @@ public class DQRequest extends com.antlersoft.android.dbimpl.ImplementationBase 
 	public String toString() {
 
 		return "DQRequest [id=" + this.id + ", status=" + this.status + ", position=" + this.position + ", errorDiscription=" + this.errorDiscription + ", totalSize=" + this.totalSize + ", downloadedSize=" + this.downloadedSize + ", type=" + this.type + ", dataEstimations=" + this.dataEstimations + ", timeEstimations=" + this.timeEstimations + ", fileName=" + this.fileName + ", FilePath=" + this.filePath + ", fileFolderPath=" + this.fileFolderPath + ", progress=" + this.progress + "]";
+	}
+	
+	public boolean isNeedToReInit(){
+		boolean flag = false;
+		switch (this.status ) {
+			case FAILED :
+			case PAUSED :
+			case PAUSED_REQUEST:
+			case DOWNLOAD_REQUEST:
+			case MAX_TIRES_DONE:
+			case SIZE_OVERLOADED:
+				flag = true;
+				break;
+
+			default:
+				break;
+		}
+		return flag;
 	}
 
 }
