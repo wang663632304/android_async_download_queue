@@ -1,115 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="4" />
-  </component>
-  <component name="AndroidDesignerProfile">
-    <option name="fullProfile">
-      <profile>
-        <option name="device" value="2.7in QVGA" />
-        <option name="deviceConfiguration" value="Portrait" />
-        <option name="targetHashString" value="android-8" />
-        <option name="theme" value="Theme" />
-      </profile>
-    </option>
-    <option name="selection" value="[Full]" />
-  </component>
-  <component name="AndroidLayoutPreviewToolWindow">
-    <option name="state">
-      <GlobalState>
-        <option name="device" value="2.7in QVGA" />
-        <option name="dockMode" value="" />
-        <option name="nightMode" value="notnight" />
-        <option name="targetHashString" value="android-8" />
-        <option name="theme" value="Theme" />
-        <option name="visible" value="false" />
-      </GlobalState>
-    </option>
+  <component name="AndroidExternalApklibDependenciesManager">
+    <artifacts>
+      <entry key="com.confiz.downloadqueue_android_async_download_queue_1.0-SNAPSHOT" value="$MAVEN_REPOSITORY$/com/confiz/downloadqueue/android_async_download_queue/1.0-SNAPSHOT/android_async_download_queue-1.0-SNAPSHOT.apklib" />
+    </artifacts>
+    <sdk-infos>
+      <entry key="com.confiz.downloadqueue_android_async_download_queue_1.0-SNAPSHOT">
+        <value>
+          <resolved-info>
+            <option name="apiLevel" value="16" />
+            <dependencies>
+              <MavenDependencyInfo>
+                <option name="artifactId" value="android" />
+                <option name="groupId" value="com.google.android" />
+                <option name="libName" value="Maven: com.google.android:android:4.1.1.4" />
+                <option name="path" value="$MAVEN_REPOSITORY$/com/google/android/android/4.1.1.4/android-4.1.1.4.jar" />
+                <option name="scope" value="provided" />
+                <option name="type" value="jar" />
+                <option name="version" value="4.1.1.4" />
+              </MavenDependencyInfo>
+              <MavenDependencyInfo>
+                <option name="artifactId" value="commons-logging" />
+                <option name="groupId" value="commons-logging" />
+                <option name="libName" value="Maven: commons-logging:commons-logging:1.1.1" />
+                <option name="path" value="$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
+                <option name="scope" value="provided" />
+                <option name="type" value="jar" />
+                <option name="version" value="1.1.1" />
+              </MavenDependencyInfo>
+              <MavenDependencyInfo>
+                <option name="artifactId" value="httpclient" />
+                <option name="groupId" value="org.apache.httpcomponents" />
+                <option name="libName" value="Maven: org.apache.httpcomponents:httpclient:4.0.1" />
+                <option name="path" value="$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.0.1/httpclient-4.0.1.jar" />
+                <option name="scope" value="provided" />
+                <option name="type" value="jar" />
+                <option name="version" value="4.0.1" />
+              </MavenDependencyInfo>
+              <MavenDependencyInfo>
+                <option name="artifactId" value="httpcore" />
+                <option name="groupId" value="org.apache.httpcomponents" />
+                <option name="libName" value="Maven: org.apache.httpcomponents:httpcore:4.0.1" />
+                <option name="path" value="$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar" />
+                <option name="scope" value="provided" />
+                <option name="type" value="jar" />
+                <option name="version" value="4.0.1" />
+              </MavenDependencyInfo>
+              <MavenDependencyInfo>
+                <option name="artifactId" value="commons-codec" />
+                <option name="groupId" value="commons-codec" />
+                <option name="libName" value="Maven: commons-codec:commons-codec:1.3" />
+                <option name="path" value="$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.3/commons-codec-1.3.jar" />
+                <option name="scope" value="provided" />
+                <option name="type" value="jar" />
+                <option name="version" value="1.3" />
+              </MavenDependencyInfo>
+              <MavenDependencyInfo>
+                <option name="artifactId" value="opengl-api" />
+                <option name="groupId" value="org.khronos" />
+                <option name="libName" value="Maven: org.khronos:opengl-api:gl1.1-android-2.1_r1" />
+                <option name="path" value="$MAVEN_REPOSITORY$/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar" />
+                <option name="scope" value="provided" />
+                <option name="type" value="jar" />
+                <option name="version" value="gl1.1-android-2.1_r1" />
+              </MavenDependencyInfo>
+              <MavenDependencyInfo>
+                <option name="artifactId" value="xmlParserAPIs" />
+                <option name="groupId" value="xerces" />
+                <option name="libName" value="Maven: xerces:xmlParserAPIs:2.6.2" />
+                <option name="path" value="$MAVEN_REPOSITORY$/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar" />
+                <option name="scope" value="provided" />
+                <option name="type" value="jar" />
+                <option name="version" value="2.6.2" />
+              </MavenDependencyInfo>
+              <MavenDependencyInfo>
+                <option name="artifactId" value="xpp3" />
+                <option name="groupId" value="xpp3" />
+                <option name="libName" value="Maven: xpp3:xpp3:1.1.4c" />
+                <option name="path" value="$MAVEN_REPOSITORY$/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar" />
+                <option name="scope" value="provided" />
+                <option name="type" value="jar" />
+                <option name="version" value="1.1.4c" />
+              </MavenDependencyInfo>
+              <MavenDependencyInfo>
+                <option name="artifactId" value="json" />
+                <option name="groupId" value="org.json" />
+                <option name="libName" value="Maven: org.json:json:20080701" />
+                <option name="path" value="$MAVEN_REPOSITORY$/org/json/json/20080701/json-20080701.jar" />
+                <option name="scope" value="provided" />
+                <option name="type" value="jar" />
+                <option name="version" value="20080701" />
+              </MavenDependencyInfo>
+              <MavenDependencyInfo>
+                <option name="artifactId" value="support-v4" />
+                <option name="groupId" value="com.google.android" />
+                <option name="libName" value="Maven: com.google.android:support-v4:r7" />
+                <option name="path" value="$MAVEN_REPOSITORY$/com/google/android/support-v4/r7/support-v4-r7.jar" />
+                <option name="scope" value="compile" />
+                <option name="type" value="jar" />
+                <option name="version" value="r7" />
+              </MavenDependencyInfo>
+              <MavenDependencyInfo>
+                <option name="artifactId" value="androiddatabase" />
+                <option name="groupId" value="com.antlersoftdatabase" />
+                <option name="libName" value="Maven: com.antlersoftdatabase:androiddatabase:1.0" />
+                <option name="path" value="$MAVEN_REPOSITORY$/com/antlersoftdatabase/androiddatabase/1.0/androiddatabase-1.0.jar" />
+                <option name="scope" value="compile" />
+                <option name="type" value="jar" />
+                <option name="version" value="1.0" />
+              </MavenDependencyInfo>
+              <MavenDependencyInfo>
+                <option name="artifactId" value="gson" />
+                <option name="groupId" value="com.google.code.gson" />
+                <option name="libName" value="Maven: com.google.code.gson:gson:2.2.4" />
+                <option name="path" value="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar" />
+                <option name="scope" value="compile" />
+                <option name="type" value="jar" />
+                <option name="version" value="2.2.4" />
+              </MavenDependencyInfo>
+            </dependencies>
+          </resolved-info>
+        </value>
+      </entry>
+    </sdk-infos>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="WARN" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f37c56c-80a9-4dd3-9867-b69cdf181208" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
-    <ignored path="test.iws" />
+    <list default="true" id="94307ed5-71e9-4f7f-b245-a5194c54d16f" name="Default" comment="" />
+    <ignored path="downloadmanagerexample.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383902446678" ignored="false" />
-    <file path="/fragment.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383893484497" ignored="false" />
-    <file path="/MyActivity.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383138141910" ignored="false" />
-    <file path="/main.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383218919316" ignored="false" />
-    <file path="/DQManager.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1382355662433" ignored="false" />
-    <file path="/*.regexp" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1382356218466" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383892603500" ignored="false" />
-    <file path="E:/X_Submanages/sub_manage_svn/projects/InsideBayArea/submanage/trunk/src/main/webapp/pages/tiles/defaultLayout.jsp" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1382434949296" ignored="false" />
-    <file path="$PROJECT_DIR$/../bcr-android/target/generated-sources/r/com/ihi/bcr/R.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1382434996011" ignored="false" />
-    <file path="E:/X_Submanages/sub_manage_svn/projects/MyWedding/submanage/trunk/src/main/java/com/skylist/stormpost/submanage/MyWeddingForm.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1382946304996" ignored="false" />
-    <file path="/MyWeddingForm.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1382946235873" ignored="false" />
-    <file path="E:/X_Submanages/sub_manage_svn/projects/MyWedding/submanage/trunk/src/main/java/com/skylist/stormpost/submanage/soap/SoapModel.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1382944389444" ignored="false" />
-    <file path="E:/X_Submanages/sub_manage_svn/projects/MyWedding/submanage/trunk/src/main/java/com/skylist/stormpost/submanage/MyWeddingAction.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1382944383001" ignored="false" />
-    <file path="/SoapModel.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1382944381404" ignored="false" />
-    <file path="/a.dummy" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383131681392" ignored="false" />
-    <file path="/DQAsyncFileDownloader.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383050631982" ignored="false" />
-    <file path="/DQFileDownloader.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383051085492" ignored="false" />
-    <file path="/ViewHolder.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383557014473" ignored="false" />
-    <file path="/DownloadListAdapter.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383546658190" ignored="false" />
-    <file path="/DQRequest.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383053820080" ignored="false" />
-    <file path="/LocalDownloadManager.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383056683756" ignored="false" />
-    <file path="/DownloadProgressListener.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383305771004" ignored="false" />
-    <file path="/DownloadUtils.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383136256714" ignored="false" />
-    <file path="E:/MusicPlayer/gen/com/andrew/apollo/IApolloService.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383216568085" ignored="false" />
-    <file path="/DownloadFileObj.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383217341552" ignored="false" />
-    <file path="E:/X_Submanages/sub_manage_svn/projects/TempaBayTimes/submanage/trunk/java/com/skylist/stormpost/submanage/action/RegistrationAction.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383217042526" ignored="false" />
-    <file path="/DownloadedFilesAdapter.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383218032922" ignored="false" />
-    <file path="/downloaded_list_item.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383219948826" ignored="false" />
-    <file path="/MainActivity.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383546335072" ignored="false" />
-    <file path="/downloading_list_item.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383308527482" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../test/gen/com/example/test/Manifest.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383286155912" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/tingworks/music/ultimatedownloader/crawlers/search/XiamiCrawler.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383548436488" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/tingworks/music/ultimatedownloader/crawlers/search/Mp3skullCrawler.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383548436488" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/tingworks/music/ultimatedownloader/helper/UMDUtils.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611690" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/tingworks/music/ultimatedownloader/crawlers/search/SogouCrawler.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383548436488" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/tingworks/music/ultimatedownloader/crawlers/search/Emp3Crawler.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383548436488" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/tingworks/music/ultimatedownloader/crawlers/search/TinglabsCrawler.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383548436488" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/tingworks/music/ultimatedownloader/download/services/DownloadTask.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/tingworks/music/ultimatedownloader/helper/TingGlobals.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/tingworks/music/ultimatedownloader/crawlers/topcharts/TingCharts.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383548436488" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/tingworks/music/ultimatedownloader/explore/services/TopChartsService.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/tingworks/music/ultimatedownloader/explore/fragments/TopChartsFragment.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552792754" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/tingworks/music/ultimatedownloader/crawlers/search/Crawler.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383548436488" ignored="false" />
-    <file path="E:/MusicPlayer/res/values/com_crashlytics_export_strings.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383553070413" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/andrew/apollo/widgets/ProfileTabCarousel.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/libraries/ActionbarSherlock/src/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorListenerAdapter.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/libraries/ActionbarSherlock/src/com/actionbarsherlock/internal/app/ActionBarImpl.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/libraries/ActionbarSherlock/src/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorSet.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/libraries/ViewPagerIndicator/AndroidManifest.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/libraries/Volley/AndroidManifest.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/libraries/AppMsg/AndroidManifest.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/libraries/SlidingMenu/AndroidManifest.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/tingworks/music/ultimatedownloader/crawlers/model/MediaObj.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/libraries/ActionbarSherlock/src/com/actionbarsherlock/internal/widget/AbsActionBarView.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/libraries/ActionbarSherlock/src/com/actionbarsherlock/internal/widget/ActionBarContextView.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/libraries/ActionbarSherlock/AndroidManifest.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/libraries/ActionbarSherlock/src/com/actionbarsherlock/internal/widget/ScrollingTabContainerView.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/libraries/ActionbarSherlock/src/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611689" ignored="false" />
-    <file path="E:/MusicPlayer/libraries/ActionbarSherlock/src/com/actionbarsherlock/internal/nineoldandroids/animation/Animator.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611690" ignored="false" />
-    <file path="E:/MusicPlayer/libraries/ActionbarSherlock/src/com/actionbarsherlock/internal/nineoldandroids/animation/ObjectAnimator.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611690" ignored="false" />
-    <file path="E:/MusicPlayer/src/com/andrew/apollo/widgets/ShowHideMasterLayout.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611690" ignored="false" />
-    <file path="E:/MusicPlayer/AndroidManifest.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611690" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/utils/DQUtilityNotifiacation.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/utils/DQAppConstants.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/utils/DQUtilityNetwork.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/utils/DQErrors.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/utils/DQAppUtils.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/utils/TouchListView.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/model/DQRequest.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/model/DQQueue.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/model/DQDownloadingStatus.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
-    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/db/DQDBAdapter.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
-    <file path="/pom.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383891645443" ignored="false" />
+    <file path="/pom.xml" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907398170" ignored="false" />
+    <file path="/Dummy.txt" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907670720" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQService.java" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907717762" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/utils/DQAppConstants.java" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907717762" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQNetworkManger.java" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907717762" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/utils/DQErrors.java" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907717762" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQResponseHolder.java" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907717762" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQAsyncFileDownloader.java" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907717762" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/project.properties" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907717762" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/model/DQRequest.java" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907717762" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/model/DQActions.java" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907717762" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/pom.xml" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907717762" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/model/DQQueue.java" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907717762" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/AndroidManifest.xml" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383908133652" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/model/DQDownloadingStatus.java" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907717762" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQFileDownloader.java" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907717762" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQManager.java" changelist="94307ed5-71e9-4f7f-b245-a5194c54d16f" time="1383907717762" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,30 +198,47 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="test" />
+    <favorites_list name="downloadmanagerexample" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/confiz/samples/activities/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="13" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0">
+            <state line="63" column="0" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <file leaf-file-name="DQManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gen-external-apklibs/com.confiz.downloadqueue_android_async_download_queue_1.0-SNAPSHOT/src/com/confiz/downloadqueue/DQManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="48" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
+            <state line="52" column="0" selection-start="1354" selection-end="1354" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DQDBAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gen-external-apklibs/com.confiz.downloadqueue_android_async_download_queue_1.0-SNAPSHOT/src/com/confiz/downloadqueue/db/DQDBAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="88" column="0" selection-start="1935" selection-end="1935" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SQLiteOpenHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/google/android/android/4.1.1.4/android-4.1.1.4-sources.jar!/android/database/sqlite/SQLiteOpenHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -192,16 +247,16 @@
       <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="11" selection-start="1604" selection-end="1604" vertical-scroll-proportion="0.7219178">
+            <state line="44" column="34" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.5024077">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../android_async_download_queue/pom.xml">
+      <file leaf-file-name="DQDatabaseHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gen-external-apklibs/com.confiz.downloadqueue_android_async_download_queue_1.0-SNAPSHOT/src/com/confiz/downloadqueue/db/DQDatabaseHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="47" selection-start="1736" selection-end="1775" vertical-scroll-proportion="0.0">
+            <state line="62" column="14" selection-start="1525" selection-end="1527" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -214,32 +269,83 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="GitLogSettings">
-    <option name="myDateState">
-      <MyDateState />
+  <component name="GradleLocalSettings">
+    <option name="availableTasks">
+      <list>
+        <GradleTaskDescriptor>
+          <option name="description" value="Compiles source set 'test:java'." />
+          <option name="name" value="compileTestJava" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles the outputs of this project." />
+          <option name="name" value="assemble" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles and tests this project." />
+          <option name="name" value="build" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Processes source set 'test:resources'." />
+          <option name="name" value="processTestResources" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Initializes a new Gradle build. [incubating]" />
+          <option name="name" value="setupBuild" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Processes source set 'main:resources'." />
+          <option name="name" value="processResources" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Deletes the build directory." />
+          <option name="name" value="clean" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Runs the unit tests." />
+          <option name="name" value="test" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+          <option name="name" value="buildDependents" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles binary 'test'." />
+          <option name="name" value="testClasses" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles and tests this project and all projects it depends on." />
+          <option name="name" value="buildNeeded" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Compiles source set 'main:java'." />
+          <option name="name" value="compileJava" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Generates Javadoc API documentation for the main source code." />
+          <option name="name" value="javadoc" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Runs all checks." />
+          <option name="name" value="check" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Installs the 'archives' artifacts into the local Maven repository." />
+          <option name="name" value="install" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles a jar archive containing the main classes." />
+          <option name="name" value="jar" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles binary 'main'." />
+          <option name="name" value="classes" />
+        </GradleTaskDescriptor>
+      </list>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/downloaded_list_item.xml" />
-        <option value="$PROJECT_DIR$/src/com/confiz/Utils/DownloadUtils.java" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/confiz/listeners/DownloadProgressListener.java" />
-        <option value="$PROJECT_DIR$/../android_async_download_queue/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/src/com/confiz/adapters/DownloadListAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/confiz/activities/MainActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/downloading_list_item.xml" />
-        <option value="$PROJECT_DIR$/src/com/confiz/model/ViewHolder.java" />
-        <option value="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQManager.java" />
-        <option value="$PROJECT_DIR$/src/com/confiz/samples/activities/MainActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/confiz/samples/adapters/DownloadListAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/confiz/samples/model/ViewHolder.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
@@ -252,7 +358,7 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="downloadmanagerexample" />
+          <option name="myItemId" value="SampleDownloadmanager" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -262,18 +368,16 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="downloadmanagerexample" />
+          <option name="myItemId" value="SampleDownloadmanager" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
         </PATH_ELEMENT>
-      </PATH>
-      <PATH>
         <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+          <option name="myItemId" value="android" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -284,7 +388,7 @@
     <option name="width" value="1616" />
     <option name="height" value="1176" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -310,19 +414,17 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Sample" />
+              <option name="myItemId" value="downloadmanagerexample" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Sample" />
+              <option name="myItemId" value="downloadmanagerexample" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -332,11 +434,51 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Sample" />
+              <option name="myItemId" value="downloadmanagerexample" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sample_async_download_queue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gen-external-apklibs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="downloadmanagerexample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_async_download_queue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gen-external-apklibs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.confiz.downloadqueue_android_async_download_queue_1.0-SNAPSHOT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="downloadmanagerexample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_async_download_queue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gen-external-apklibs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.confiz.downloadqueue_android_async_download_queue_1.0-SNAPSHOT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -344,116 +486,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="samples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_async_download_queue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="samples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_async_download_queue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="samples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_async_download_queue" />
+              <option name="myItemId" value="downloadqueue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
-    <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.confiz.viewholders" />
-      <recent name="com.confiz.adapters" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Android Project\test\res\layout" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Android Application.SampleDownloader">
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -484,8 +545,20 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -512,21 +585,7 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -541,7 +600,6 @@
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -561,71 +619,21 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <method />
+    <list size="0" />
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
     </configuration>
-    <configuration default="false" name="SampleDownloader" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="downloadmanagerexample" />
-      <option name="ACTIVITY_CLASS" value="com.confiz.activities.MainActivity" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <RunnerSettings RunnerId="AndroidDebugRunner" />
-      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
-      <method />
-    </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Android Application.SampleDownloader" />
-    </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1f37c56c-80a9-4dd3-9867-b69cdf181208" name="Default" comment="" />
-      <created>1382348084155</created>
-      <updated>1382348084155</updated>
+      <changelist id="94307ed5-71e9-4f7f-b245-a5194c54d16f" name="Default" comment="" />
+      <created>1383903223859</created>
+      <updated>1383903223859</updated>
     </task>
     <servers />
   </component>
@@ -633,35 +641,31 @@
     <frame x="-8" y="-8" width="1616" height="1176" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39952996" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22561692" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6709753" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32321253" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32947233" sideWeight="0.77526987" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27348778" sideWeight="0.77526987" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22473013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.77438307" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.77438307" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6709753" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278496" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32777232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32947233" sideWeight="0.67026496" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967825" sideWeight="0.67026496" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32973504" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39952996" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -724,97 +728,45 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/confiz/samples/activities/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="10" selection-start="2413" selection-end="2413" vertical-scroll-proportion="0.0">
+        <state line="63" column="0" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Softwares/IDE/adt-bundle-windows-x86/sdk/sources/android-14/java/lang/String.java">
+    <entry file="file://$PROJECT_DIR$/gen-external-apklibs/com.confiz.downloadqueue_android_async_download_queue_1.0-SNAPSHOT/src/com/confiz/downloadqueue/DQManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="26" selection-start="4215" selection-end="4215" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/confiz/samples/model/ViewHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/confiz/samples/adapters/DownloadListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="16" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="397" column="39" selection-start="11006" selection-end="11006" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="16" selection-start="4807" selection-end="4807" vertical-scroll-proportion="0.20353982" />
-      </provider>
-    </entry>
-    <entry file="file://D:/Softwares/IDE/adt-bundle-windows-x86/sdk/sources/android-14/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="26" selection-start="4215" selection-end="4215" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="419" column="72" selection-start="11657" selection-end="11657" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/confiz/samples/adapters/DownloadListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="20" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/confiz/samples/listeners/DownloadProgressListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="21" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/confiz/samples/model/ViewHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="35" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/confiz/samples/utils/DownloadUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="22" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/confiz/samples/activities/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0">
+        <state line="52" column="0" selection-start="1354" selection-end="1354" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/gen-external-apklibs/com.confiz.downloadqueue_android_async_download_queue_1.0-SNAPSHOT/src/com/confiz/downloadqueue/db/DQDBAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="48" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
+        <state line="88" column="0" selection-start="1935" selection-end="1935" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/pom.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/android/android/4.1.1.4/android-4.1.1.4-sources.jar!/android/database/sqlite/SQLiteOpenHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="47" selection-start="1736" selection-end="1775" vertical-scroll-proportion="0.0">
+        <state line="16" column="0" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen-external-apklibs/com.confiz.downloadqueue_android_async_download_queue_1.0-SNAPSHOT/src/com/confiz/downloadqueue/db/DQDatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="14" selection-start="1525" selection-end="1527" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="11" selection-start="1604" selection-end="1604" vertical-scroll-proportion="0.7219178">
+        <state line="44" column="34" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.5024077">
           <folding />
         </state>
       </provider>
@@ -836,7 +788,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Android</last-edited>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -848,7 +800,6 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>android-support-v4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -860,7 +811,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>Android 2.3.3 Platform (1)</last-edited>
+          <last-edited>1.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -872,11 +823,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>android_async_download_queue</last-edited>
+          <last-edited>downloadmanagerexample</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -896,7 +848,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.google.code.gson:gson:2.2.4</last-edited>
+          <last-edited>Maven: com.antlersoftdatabase:androiddatabase:1.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

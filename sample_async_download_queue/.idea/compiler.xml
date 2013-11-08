@@ -22,7 +22,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="android_async_download_queue" />
         <module name="downloadmanagerexample" />
       </profile>
     </annotationProcessing>

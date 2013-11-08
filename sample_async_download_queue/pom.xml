@@ -7,6 +7,8 @@
     <groupId>com.confiz.samples</groupId>
     <artifactId>downloadmanagerexample</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>apk</packaging>
+    <name>SampleDownloadmanager</name>
 
     <repositories>
         <repository>
@@ -41,13 +43,13 @@
             <groupId>com.antlersoftdatabase</groupId>
             <artifactId>androiddatabase</artifactId>
             <version>1.0</version>
-            <scope>provided</scope>
         </dependency>
 
     </dependencies>
 
 
     <build>
+        <sourceDirectory>src</sourceDirectory>
         <pluginManagement>
             <plugins>
                 <plugin>

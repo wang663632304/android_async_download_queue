@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../android_async_download_queue/android_async_download_queue.iml" filepath="$PROJECT_DIR$/../android_async_download_queue/android_async_download_queue.iml" />
       <module fileurl="file://$PROJECT_DIR$/downloadmanagerexample.iml" filepath="$PROJECT_DIR$/downloadmanagerexample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gen-external-apklibs/~apklib-com.confiz.downloadqueue_android_async_download_queue_1.0-SNAPSHOT.iml" filepath="$PROJECT_DIR$/gen-external-apklibs/~apklib-com.confiz.downloadqueue_android_async_download_queue_1.0-SNAPSHOT.iml" />
     </modules>
   </component>
 </project>
