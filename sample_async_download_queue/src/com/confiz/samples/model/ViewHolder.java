@@ -1,4 +1,4 @@
-package com.confiz.model;
+package com.confiz.samples.model;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.confiz.adapters.DownloadListAdapter;
 import com.confiz.downloadqueue.DQManager;
-import com.example.test.R;
+import com.confiz.samples.R;
+import com.confiz.samples.adapters.DownloadListAdapter;
 
 import java.util.HashMap;
 

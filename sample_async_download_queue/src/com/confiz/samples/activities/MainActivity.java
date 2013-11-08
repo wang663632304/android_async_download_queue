@@ -1,4 +1,4 @@
-package com.confiz.activities;
+package com.confiz.samples.activities;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -11,14 +11,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.confiz.utils.DownloadUtils;
-import com.confiz.adapters.DownloadListAdapter;
 import com.confiz.downloadqueue.DQManager;
 import com.confiz.downloadqueue.DQResponseHolder;
 import com.confiz.downloadqueue.model.DQRequest;
-import com.confiz.listeners.DownloadProgressListener;
-import com.confiz.model.ViewHolder;
-import com.example.test.R;
+import com.confiz.samples.R;
+import com.confiz.samples.adapters.DownloadListAdapter;
+import com.confiz.samples.listeners.DownloadProgressListener;
+import com.confiz.samples.model.ViewHolder;
+import com.confiz.samples.utils.DownloadUtils;
 
 public class MainActivity extends Activity {
     private static final String DOWNLOAD_MANAGER = "download_manager";

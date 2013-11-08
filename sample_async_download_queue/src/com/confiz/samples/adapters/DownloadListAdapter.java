@@ -1,12 +1,12 @@
-package com.confiz.adapters;
+package com.confiz.samples.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import com.confiz.model.ViewHolder;
-import com.example.test.R;
+import com.confiz.samples.R;
+import com.confiz.samples.model.ViewHolder;
 
 import java.util.ArrayList;
 import java.util.HashMap;

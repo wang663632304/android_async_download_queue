@@ -1,4 +1,4 @@
-package com.confiz.listeners;
+package com.confiz.samples.listeners;
 
 import android.content.Context;
 import android.content.Intent;
