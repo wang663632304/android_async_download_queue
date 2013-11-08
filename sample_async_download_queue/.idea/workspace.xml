@@ -29,13 +29,16 @@
   <component name="ChangeListManager">
     <list default="true" id="1f37c56c-80a9-4dd3-9867-b69cdf181208" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../android_async_download_queue/android_async_download_queue.iml" afterPath="$PROJECT_DIR$/../android_async_download_queue/android_async_download_queue.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/downloadmanagerexample.iml" afterPath="$PROJECT_DIR$/downloadmanagerexample.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../android_async_download_queue/pom.xml" afterPath="$PROJECT_DIR$/../android_async_download_queue/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383743187553" ignored="false" />
+    <file path="/Dummy.txt" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383889709986" ignored="false" />
     <file path="/fragment.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383553061739" ignored="false" />
     <file path="/MyActivity.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383138141910" ignored="false" />
     <file path="/main.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383218919316" ignored="false" />
@@ -97,6 +100,21 @@
     <file path="E:/MusicPlayer/libraries/ActionbarSherlock/src/com/actionbarsherlock/internal/nineoldandroids/animation/ObjectAnimator.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611690" ignored="false" />
     <file path="E:/MusicPlayer/src/com/andrew/apollo/widgets/ShowHideMasterLayout.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611690" ignored="false" />
     <file path="E:/MusicPlayer/AndroidManifest.xml" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383552611690" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/utils/DQUtilityNotifiacation.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/utils/DQAppConstants.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/utils/DQUtilityNetwork.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/utils/DQErrors.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/utils/DQAppUtils.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/utils/TouchListView.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/model/DQRequest.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/model/DQQueue.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/model/DQDownloadingStatus.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/db/DQDBAdapter.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQFileDownloader.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQService.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQNetworkManger.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQResponseHolder.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
+    <file path="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQAsyncFileDownloader.java" changelist="1f37c56c-80a9-4dd3-9867-b69cdf181208" time="1383890449207" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,8 +129,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -149,6 +165,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -176,24 +194,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../android_async_download_queue/res/values-v11/styles.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.10271903">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../android_async_download_queue/res/values-v14/styles.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ViewHolder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/confiz/model/ViewHolder.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -215,21 +215,18 @@
       <file leaf-file-name="DQManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="397" column="39" selection-start="11006" selection-end="11006" vertical-scroll-proportion="0.0">
+            <state line="419" column="72" selection-start="11657" selection-end="11657" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="downloading_list_item.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/downloading_list_item.xml">
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../android_async_download_queue/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1858" selection-end="1858" vertical-scroll-proportion="0.0">
+            <state line="7" column="16" selection-start="366" selection-end="366" vertical-scroll-proportion="0.1904">
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -251,7 +248,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/confiz/listeners/DQResponseListenenerImpl.java" />
         <option value="$PROJECT_DIR$/src/com/confiz/listeners/DQResponseListenerImpl.java" />
         <option value="$PROJECT_DIR$/src/com/confiz/activities/MyActivity.java" />
         <option value="$PROJECT_DIR$/src/com/confiz/model/DownloadFileObj.java" />
@@ -267,8 +263,19 @@
         <option value="$PROJECT_DIR$/src/com/confiz/activities/MainActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/downloading_list_item.xml" />
         <option value="$PROJECT_DIR$/src/com/confiz/model/ViewHolder.java" />
+        <option value="$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQManager.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -312,10 +319,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Android 4.0 Platform &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -454,106 +457,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sample_async_download_queue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="android_async_download_queue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_async_download_queue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values-v14" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_async_download_queue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values-v11" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_async_download_queue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../android_async_download_queue/libs/com.antlersoft.android.db_0.1.6.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../android_async_download_queue/pom.xml" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -591,6 +526,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -617,19 +565,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -751,12 +686,12 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6709753" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32777232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32777232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3243243" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32947233" sideWeight="0.6722277" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27348778" sideWeight="0.6722277" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22473013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -764,8 +699,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.77438307" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6709753" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278496" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39952996" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -836,24 +771,37 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/confiz/activities/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="41" selection-start="80" selection-end="93" vertical-scroll-proportion="0.08571429" />
+        <state line="67" column="10" selection-start="2413" selection-end="2413" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+    <entry file="file://D:/Softwares/IDE/adt-bundle-windows-x86/sdk/sources/android-14/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="41" selection-start="92" selection-end="92" vertical-scroll-proportion="0.05592105" />
+        <state line="109" column="26" selection-start="4215" selection-end="4215" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/confiz/model/ViewHolder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="32" selection-start="253" selection-end="254" vertical-scroll-proportion="0.0" />
+        <state line="50" column="0" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/confiz/adapters/DownloadListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="76" selection-start="416" selection-end="438" vertical-scroll-proportion="0.0">
+        <state line="49" column="16" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="397" column="39" selection-start="11006" selection-end="11006" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -861,11 +809,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/confiz/utils/DownloadUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="22" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="723" selection-end="723" vertical-scroll-proportion="0.25810474" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/confiz/listeners/DownloadProgressListener.java">
@@ -882,26 +825,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/downloading_list_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1858" selection-end="1858" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/confiz/model/ViewHolder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="0" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="397" column="39" selection-start="11006" selection-end="11006" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -927,16 +853,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/res/values-v14/styles.xml">
+    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/src/com/confiz/downloadqueue/DQManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
+        <state line="419" column="72" selection-start="11657" selection-end="11657" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/res/values-v11/styles.xml">
+    <entry file="file://$PROJECT_DIR$/../android_async_download_queue/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.10271903">
+        <state line="7" column="16" selection-start="366" selection-end="366" vertical-scroll-proportion="0.1904">
           <folding />
         </state>
       </provider>
@@ -1018,7 +944,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>libs</last-edited>
+          <last-edited>Maven: com.google.code.gson:gson:2.2.4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
